@@ -16,3 +16,124 @@
     sans-serif;
 }
 
+body {
+  min-height: 100vh;
+  background: radial-gradient(
+    circle at 50% 0%,
+    #e2e8f0 0%,
+    #f1f5f9 50%,
+    #e0f2fe
+  );
+  color: #1d1d1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.font-clip {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  background: linear-gradient(135deg, #1d1d1f 0%, #555557 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+  padding: 0.5rem 0.5rem;
+  justify-content: center;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.04),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  margin-bottom: 4rem;
+  width: fit-content;
+  gap: 0.5rem;
+}
+nav a {
+  text-decoration: none;
+  color: #1d1d1f;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nama {
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: #1d1d1f;
+  text-align: center;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 48px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition:
+    transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    box-shadow 0.5s ease;
+}
+.profile-img:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+/* Mobile */
+@media (max-width: 768px) {
+  body {
+    padding: 2rem 1rem;
+  }
+  .font-clip {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  nav {
+    flex-wrap: wrap;
+    padding: 0.4rem;
+    width: 100%;
+    border-radius: 24px;
+    margin-bottom: 3rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.2rem;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .nama {
+    font-size: 1.5rem;
+  }
+
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 30px;
+  }
+
+  .profile-img:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
