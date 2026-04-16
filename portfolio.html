@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/portfolio.css" />
+    <title>FathurDEV • Portfolio</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="font-clip">Welcome to My Portfolio</header>
+    <!-- Nav -->
+    <!-- Todo: ganti link href untuk github pages -->
+    <nav class="navbar">
+      <a href="/index.html" class="nav-link">Home</a>
+      <a href="/portfolio.html" class="nav-link">Portfolio</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/contact.html" class="nav-link">Contact</a>
+    </nav>
+    <main>
+      <!-- Profile -->
+      <section id="profile" class="profile-section">
+        <div class="profile-img-container">
+          <img
+            src="/src/img/gambar3.png"
+            alt="Muhammad Fathurrahman"
+            class="profile-img"
+          />
+        </div>
+        <h1><span class="gradient-text">Fathurrahman</span><br />Muhammad.</h1>
+        <h2>Informatics Student.</h2>
+        <p>
+          Hi, I'm a full-stack developer specializing in building interactive,
+          scalable, and modern web applications.
+        </p>
+      </section>
+
+      <!-- Skills & Projects -->
+      <section id="tech-specs" class="section">
+        <h2 class="section-title">Tech Specs.</h2>
+        <div class="grid-layout">
+          <div>
+            <h3 class="box-title">Engineered with</h3>
+            <div class="skills-container">
+              <span class="skill-tag">HTML5 / CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Figma</span>
+            </div>
+          </div>
+
+          <!-- Projects -->
+          <div>
+            <h3 class="box-title">Projects</h3>
+            <ul class="project-list">
+              <li class="project-item">
+                <h3>HargaAI</h3>
+                <p>
+                  Monitoring cerdas tren harga pangan berbasis AI. Dirancang
+                  untuk efisiensi anggaran masa depan.
+                </p>
+              </li>
+              <li class="project-item">
+                <h3>HoaxDetect AI SaaS</h3>
+                <p>
+                  Platform deteksi misinformasi dengan integrasi *Natural
+                  Language Processing* tingkat lanjut dari Gemini API.
+                </p>
+              </li>
+              <li class="project-item">
+                <h3>MercuCycle</h3>
+                <p>
+                  Ekosistem *marketplace* kampus yang revolusioner untuk daur
+                  ulang dan barter barang mahasiswa.
+                </p>
+              </li>
+              <li class="project-item">
+                <h3>PetCare+</h3>
+                <p>
+                  Klinik virtual di genggaman Anda. Konsultasi kesehatan hewan
+                  peliharaan secara *real-time*.
+                </p>
+              </li>
+              <li class="project-item">
+                <h3>IDOV Movie</h3>
+                <p>
+                  Eksplorasi sinematik modern. Platform basis data film dinamis
+                  yang dibangun dengan React.js untuk memberikan pengalaman
+                  <i>browsing</i> yang mulus dan responsif.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gambar Portfolio -->
+      <section id="gallery" class="section" style="padding-bottom: 0">
+        <h2 class="section-title">Design in motion.</h2>
+      </section>
+
+      <div class="gallery-wrapper">
+        <div class="gallery-scroll">
+          <a
+            href="https://gemini.google.com/share/a793f83200dc"
+            target="_blank"
+            class="gallery-card"
+          >
+            <img src="/src/img/hargaai.png" alt="HargaAI" class="gallery-img" />
+            <div class="gallery-caption">HargaAI Dashboard</div>
+          </a>
+          <a
+            href="https://fathur-md.github.io/hoaxdetect-ai-saas/#/"
+            target="_blank"
+            class="gallery-card"
+          >
+            <img
+              src="/src/img/hoaxai.png"
+              alt="HoaxDetect"
+              class="gallery-img"
+            />
+            <div class="gallery-caption">HoaxDetect Engine</div>
+          </a>
+          <a
+            href="/src/file/mercucycle.pdf"
+            target="_blank"
+            class="gallery-card"
+          >
+            <img
+              src="/src/img/mercucycle.png"
+              alt="MercuCycle"
+              class="gallery-img"
+            />
+            <div class="gallery-caption">MercuCycle Prototype</div>
+          </a>
+          <a href="/src/file/petcare+.pdf" target="_blank" class="gallery-card">
+            <img
+              src="/src/img/petcare.png"
+              alt="PetCare+"
+              class="gallery-img"
+              style="object-position: right"
+            />
+            <div class="gallery-caption">PetCare+ Prototype</div>
+          </a>
+          <a
+            href="https://idov-site.web.app"
+            target="_blank"
+            class="gallery-card"
+          >
+            <img src="/src/img/idov.png" alt="idovmovie" class="gallery-img" />
+            <div class="gallery-caption">IDOV Movie Database</div>
+          </a>
+
+          <a
+            href="https://github.com/fathur-md"
+            target="_blank"
+            class="gallery-card"
+          >
+            <img src="/src/img/github.png" alt="github" class="gallery-img" />
+            <div class="gallery-caption">
+              View more on GitHub <span class="arrow">↗</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <section class="contact-section">
+        <h2 class="contact-title">Let's build<br />the future together.</h2>
+        <p class="contact-subtitle">
+          Available for freelance opportunities and innovative collaborations.
+        </p>
+
+        <form action="#" method="post" class="contact-form">
+          <div class="form-group">
+            <input
+              type="text"
+              name="name"
+              class="form-input"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              class="form-input"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <textarea
+              name="message"
+              class="form-input"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send Message</button>
+        </form>
+
+        <div class="social-links">
+          <a href="https://github.com/fathur-md" target="_blank">GitHub</a>
+          <a href="mailto:241110109@mahasiswa.mercubuana-yogya.ac.id"
+            >Email Directly</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>Copyright © 2026 Muhammad Fathurrahman. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
