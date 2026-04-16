@@ -1,0 +1,101 @@
+:root {
+  --bg-color: #000000;
+  --text-main: #f5f5f7;
+  --text-muted: #86868b;
+  --card-bg: #111111;
+  --border-color: #333336;
+  --accent: #2997ff;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Archive Grid */
+.archive-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px 120px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .archive-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.archive-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 32px;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.archive-card:hover {
+  transform: translateY(-4px);
+  background-color: #1a1a1c;
+  border-color: #55555a;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.materi-kode {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-main);
+  background-color: #333336;
+  padding: 4px 10px;
+  border-radius: 8px;
+  letter-spacing: 0.05em;
+}
+
+.materi-tanggal {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.card-desc {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: 24px;
+}
+
+.card-footer {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  font-size: 11px;
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  padding: 4px 12px;
+  border-radius: 30px;
+}

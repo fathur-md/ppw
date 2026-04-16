@@ -19,6 +19,9 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);
@@ -414,4 +417,5 @@ textarea.form-input {
   color: #424245;
   font-size: 12px;
   background-color: #0a0a0c;
+  margin-top: auto;
 }
