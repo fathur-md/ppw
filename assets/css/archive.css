@@ -7,15 +7,11 @@
   --accent: #2997ff;
 }
 
-.text-muted {
-  color: var(--text-muted);
-}
-
 /* Archive Grid */
 .archive-container {
   max-width: 980px;
   margin: 0 auto;
-  padding: 0 20px 120px;
+  padding: 0 0 120px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
