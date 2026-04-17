@@ -310,3 +310,9 @@ textarea.form-input {
     padding-left: 20px;
   }
 }
+
+#tech-specs,
+#gallery,
+#contact {
+  padding-block: 80px;
+}
