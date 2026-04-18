@@ -7,27 +7,109 @@
     <link rel="stylesheet" href="../assets/css/about.css" />
     <title>FathurDEV • About</title>
   </head>
-  <body>
-    <!-- Header -->
-    <!-- <header class="font-clip">Welcome to My Portfolio</header> -->
-    <!-- Nav -->
-    <!-- Todo: ganti link href untuk github pages -->
-    <nav class="navbar">
-      <a href="../" class="nav-link">Home</a>
-      <a href="../portfolio/" class="nav-link">Portfolio</a>
-      <a href="../archive/" class="nav-link">Archive</a>
-      <a href="../about/" class="nav-link">About</a>
-      <a href="../portfolio/#contact" class="nav-link">Contact</a>
+  <body class="about-body">
+    <!--
+      TODO: Ubah atribut `href` agar menggunakan relative path yang sesuai untuk deployment GitHub Pages.
+    -->
+    <nav class="navbar about-navbar">
+      <a href="../" class="nav-link about-navlink">Home</a>
+      <a href="../portfolio/" class="nav-link about-navlink">Portfolio</a>
+      <a href="../archive/" class="nav-link about-navlink">Archive</a>
+      <a href="../about/" class="nav-link about-navlink active-about">About</a>
+      <a href="../portfolio/#contact" class="nav-link about-navlink">Contact</a>
     </nav>
 
     <main class="container">
-      <section class="section">
-        <h1 class="section-title">About Page</h1>
-        
-      </section>
+      <header class="about-header">
+        <div class="avatar-container">
+          <img
+            src="../assets/img/gambar3.png"
+            alt="avatar"
+            class="avatar-small"
+          />
+          <div class="status-dot"></div>
+        </div>
+        <h1 class="section-title">
+          Curating code,<br />
+          <span class="gradient-text">designing impact.</span>
+        </h1>
+      </header>
+
+      <div class="content-grid">
+        <section>
+          <div class="bio-text">
+            <p>
+              Hi, I'm <strong>Muhammad Fathurrahman</strong>. I'm a full-stack
+              developer and Informatics student dedicated to exploring the vast
+              landscape of digital innovation.
+            </p>
+            <p>
+              I specialize in building interactive, scalable, and modern web
+              applications that bridge the gap between complex technical
+              functionality and clean visual design.
+            </p>
+            <p>
+              I believe the best technology is "invisible"—solutions that work
+              seamlessly behind the scenes to provide an exceptional user
+              experience through AI integration and modern engineering.
+            </p>
+          </div>
+          <div class="highlights-grid">
+            <div class="highlight-card">
+              <h4>Active Learner</h4>
+              <p>Informatics</p>
+            </div>
+            <div class="highlight-card">
+              <h4>Full-Stack</h4>
+              <p>Development</p>
+            </div>
+            <div class="highlight-card">
+              <h4>Clean Code</h4>
+              <p>Mindset</p>
+            </div>
+          </div>
+        </section>
+        <aside>
+          <div class="info-card">
+            <span class="card-label">The Journey</span>
+
+            <div class="edu-item">
+              <h3>B.S. in Computer Science</h3>
+              <span>2024 - Present</span>
+              <p>
+                Specializing in modern software development and scalable data
+                systems.
+              </p>
+            </div>
+
+            <div class="edu-item">
+              <h3>Academic Foundations</h3>
+              <span>General Education</span>
+              <p>
+                Strong background in logic, mathematics, and critical problem
+                solving.
+              </p>
+            </div>
+
+            <span class="card-label" style="margin-top: 2.8rem"
+              >Design Philosophy</span
+            >
+            <ul class="values-list">
+              <li>
+                <div class="dot-circle"></div>
+                Clean & Minimal Interfaces
+              </li>
+              <li>
+                <div class="dot-circle"></div>
+                Performance First Mentality
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer about-footer">
       <p>Copyright © 2026 Muhammad Fathurrahman. All rights reserved.</p>
     </footer>
   </body>
