@@ -1,14 +1,12 @@
-:root {
-  --bg-color: #000000;
-  --text-main: #f5f5f7;
-  --text-muted: #86868b;
-  --card-bg: #111111;
-  --border-color: #333336;
-  --accent: #2997ff;
+.archive-body {
+  --archive-card-bg: #111111;
+  --archive-border-color: #333336;
+  --archive-text-main: #f5f5f7;
+  --archive-text-muted: #86868b;
 }
 
 /* Archive Grid */
-.archive-container {
+.archive-body .archive-container {
   max-width: 980px;
   margin: 0 auto;
   padding: 0 0 120px;
@@ -18,14 +16,14 @@
 }
 
 @media (min-width: 768px) {
-  .archive-container {
+  .archive-body .archive-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.archive-card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
+.archive-body .archive-card {
+  background-color: var(--archive-card-bg);
+  border: 1px solid var(--archive-border-color);
   border-radius: 20px;
   padding: 32px;
   transition:
@@ -38,60 +36,60 @@
   color: inherit;
 }
 
-.archive-card:hover {
+.archive-body .archive-card:hover {
   transform: translateY(-4px);
   background-color: #1a1a1c;
   border-color: #55555a;
 }
 
-.card-header {
+.archive-body .card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 20px;
 }
 
-.materi-kode {
+.archive-body .materi-kode {
   font-size: 12px;
   font-weight: 600;
-  color: var(--text-main);
+  color: var(--archive-text-main);
   background-color: #333336;
   padding: 4px 10px;
   border-radius: 8px;
   letter-spacing: 0.05em;
 }
 
-.materi-tanggal {
+.archive-body .materi-tanggal {
   font-size: 13px;
-  color: var(--text-muted);
+  color: var(--archive-text-muted);
   font-family: monospace;
 }
 
-.card-title {
+.archive-body .card-title {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 12px;
   letter-spacing: -0.01em;
 }
 
-.card-desc {
+.archive-body .card-desc {
   font-size: 15px;
-  color: var(--text-muted);
+  color: var(--archive-text-muted);
   line-height: 1.5;
   flex-grow: 1;
   margin-bottom: 24px;
 }
 
-.card-footer {
+.archive-body .card-footer {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
 }
 
-.tech-badge {
+.archive-body .tech-badge {
   font-size: 11px;
-  color: var(--text-muted);
-  border: 1px solid var(--border-color);
+  color: var(--archive-text-muted);
+  border: 1px solid var(--archive-border-color);
   padding: 4px 12px;
   border-radius: 30px;
 }
