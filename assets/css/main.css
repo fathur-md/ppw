@@ -1,6 +1,4 @@
-@import url("./token.css");
-@import url("./backup/global.css");
-
+@import url("./shared.css");
 @import url("./backup/about.css");
 @import url("./backup/portfolio.css");
 @import url("./backup/archive.css");
