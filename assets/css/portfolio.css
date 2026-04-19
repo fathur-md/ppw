@@ -145,15 +145,31 @@
   display: flex;
   gap: 20px;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   width: 100%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: auto;
+  scrollbar-color: var(--border) transparent;
+  /*👉scrollbar-width: none;
+  -ms-overflow-style: none;👈*/
 }
 
 .gallery-scroll::-webkit-scrollbar {
-  display: none;
+  display: block !important;
+  height: 10px;
+}
+.gallery-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.gallery-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+.gallery-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: var(--muted);
 }
 
 .gallery-card {
