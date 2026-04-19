@@ -7,7 +7,7 @@
 
 /* Archive Grid */
 .archive-body .archive-container {
-  max-width: 980px;
+  max-width: var(--layout-container);
   margin: 0 auto;
   padding: 0 0 120px;
   display: grid;
