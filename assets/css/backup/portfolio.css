@@ -13,14 +13,6 @@
   }
 }
 
-.portfolio-body {
-  --portfolio-card-bg: var(--card-bg);
-  --portfolio-border-color: var(--border-color);
-  --portfolio-text-main: var(--text-main);
-  --portfolio-text-muted: var(--text-muted);
-  --portfolio-surface: var(--surface);
-}
-
 .portfolio-body .profile-section {
   display: flex;
   flex-direction: column;
