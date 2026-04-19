@@ -133,6 +133,12 @@ a {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+.gradient-text-blue {
+  background: linear-gradient(135deg, #0071e3 0%, #42a5f5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .font-clip {
   font-size: 2rem;
