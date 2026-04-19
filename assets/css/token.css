@@ -6,10 +6,11 @@
   --muted: #9a9aa1;
   --border: #2f2f33;
 
-  --card-bg: #ffffff;
-  --accent-color: #0066cc;
   --accent: #2997ff;
-
+  
+  --card-bg: #ffffff;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.04);
+  --accent-color: #0066cc;
   --accent-gradient: linear-gradient(135deg, #0071e3 0%, #42a5f5 100%);
 
   --radius-sm: 8px;
@@ -23,7 +24,6 @@
   --space-5: 40px;
 
   --shadow-1: 0 8px 24px rgba(0, 0, 0, 0.22);
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.04);
-
+  
   --container: 980px;
 }

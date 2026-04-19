@@ -68,14 +68,6 @@
   animation: fadeUp 1s ease-out 0.8s backwards;
 }
 
-.section-title {
-  font-size: 48px;
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  margin-bottom: 40px;
-  text-align: center;
-}
-
 .grid-layout {
   display: grid;
   grid-template-columns: 1fr;
@@ -83,6 +75,14 @@
   padding: 20px;
 }
 
+#tech-specs .section-title,
+#gallery .section-title {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  margin-bottom: 40px;
+  text-align: center;
+}
 .box-title {
   font-size: 24px;
   font-weight: 600;
