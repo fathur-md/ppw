@@ -141,7 +141,6 @@ a {
   -ms-user-select: none;
 }
 
-.gradient-text-blue,
 .gradient-text--blue {
   background: linear-gradient(135deg, #0071e3 0%, #42a5f5 100%);
   background-clip: text;
