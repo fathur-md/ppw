@@ -13,7 +13,15 @@
   }
 }
 
-.profile-section {
+.portfolio-body {
+  --portfolio-card-bg: var(--card-bg);
+  --portfolio-border-color: var(--border-color);
+  --portfolio-text-main: var(--text-main);
+  --portfolio-text-muted: var(--text-muted);
+  --portfolio-surface: var(--surface);
+}
+
+.portfolio-body .profile-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,12 +31,12 @@
   animation: fadeIn 1.5s ease-out;
 }
 
-.profile-img-container {
+.portfolio-body .profile-img-container {
   margin-bottom: 40px;
   animation: fadeUp 1s ease-out 0.2s backwards;
 }
 
-.profile-img {
+.portfolio-body .profile-img {
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -43,7 +51,7 @@
   cursor: default;
 }
 
-.profile-section h1 {
+.portfolio-body .profile-section h1 {
   font-size: clamp(40px, 8vw, 80px);
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -52,7 +60,7 @@
   animation: fadeUp 1s ease-out 0.4s backwards;
 }
 
-.profile-section h2 {
+.portfolio-body .profile-section h2 {
   font-size: clamp(20px, 4vw, 32px);
   font-weight: 500;
   color: var(--text-muted);
@@ -61,42 +69,42 @@
   animation: fadeUp 1s ease-out 0.6s backwards;
 }
 
-.profile-section p {
+.portfolio-body .profile-section p {
   max-width: 600px;
   font-size: 18px;
   color: var(--text-muted);
   animation: fadeUp 1s ease-out 0.8s backwards;
 }
 
-.grid-layout {
+.portfolio-body .grid-layout {
   display: grid;
   grid-template-columns: 1fr;
   gap: 40px;
   padding: 20px;
 }
 
-#tech-specs .section-title,
-#gallery .section-title {
+.portfolio-body #tech-specs .section-title,
+.portfolio-body #gallery .section-title {
   font-size: 48px;
   font-weight: 700;
   letter-spacing: -0.05em;
   margin-bottom: 40px;
   text-align: center;
 }
-.box-title {
+.portfolio-body .box-title {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 30px;
   letter-spacing: 0.02em;
 }
 
-.skills-container {
+.portfolio-body .skills-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-.skill-tag {
+.portfolio-body .skill-tag {
   background-color: var(--surface);
   color: var(--text);
   padding: 12px 20px;
@@ -108,40 +116,40 @@
   cursor: pointer;
 }
 
-.skill-tag:hover {
+.portfolio-body .skill-tag:hover {
   border-color: var(--text);
   transform: scale(1.05);
 }
 
-.project-list {
+.portfolio-body .project-list {
   list-style: none;
 }
 
-.project-item {
+.portfolio-body .project-item {
   padding: 24px 0;
   border-top: 1px solid var(--border);
 }
 
-.project-item h3 {
+.portfolio-body .project-item h3 {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 8px;
   letter-spacing: -0.01em;
 }
 
-.project-item p {
+.portfolio-body .project-item p {
   color: var(--muted);
   font-size: 15px;
   line-height: 1.5;
 }
 
-.gallery-wrapper {
+.portfolio-body .gallery-wrapper {
   width: 100%;
   padding-left: calc((100vw - min(100% - 2rem, 980px)) / 2);
   padding-right: 20px;
 }
 
-.gallery-scroll {
+.portfolio-body .gallery-scroll {
   display: flex;
   gap: 20px;
   overflow-x: auto;
@@ -156,23 +164,23 @@
   -ms-overflow-style: none;👈*/
 }
 
-.gallery-scroll::-webkit-scrollbar {
+.portfolio-body .gallery-scroll::-webkit-scrollbar {
   display: block !important;
   height: 10px;
 }
-.gallery-scroll::-webkit-scrollbar-track {
+.portfolio-body .gallery-scroll::-webkit-scrollbar-track {
   background: transparent;
 }
-.gallery-scroll::-webkit-scrollbar-thumb {
+.portfolio-body .gallery-scroll::-webkit-scrollbar-thumb {
   background-color: var(--border);
   border-radius: 10px;
   transition: background 0.3s;
 }
-.gallery-scroll::-webkit-scrollbar-thumb:hover {
+.portfolio-body .gallery-scroll::-webkit-scrollbar-thumb:hover {
   background-color: var(--muted);
 }
 
-.gallery-card {
+.portfolio-body .gallery-card {
   width: 500px;
   min-width: 300px;
   max-width: 80vw;
@@ -185,18 +193,18 @@
   border: 1px solid var(--border);
 }
 
-.gallery-img {
+.portfolio-body .gallery-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.gallery-card:hover .gallery-img {
+.portfolio-body .gallery-card:hover .gallery-img {
   transform: scale(1.05);
 }
 
-.gallery-caption {
+.portfolio-body .gallery-caption {
   position: absolute;
   left: 0;
   right: 0;
@@ -207,27 +215,27 @@
   font-weight: 600;
 }
 
-.contact-section {
+.portfolio-body .contact-section {
   text-align: center;
   padding: 120px 20px;
   border-top: 1px solid var(--border);
   background: linear-gradient(to bottom, transparent, rgba(10, 10, 12, 0.5));
 }
 
-.contact-title {
+.portfolio-body .contact-title {
   font-size: clamp(36px, 6vw, 56px);
   font-weight: 700;
   letter-spacing: -0.04em;
   margin-bottom: 20px;
 }
 
-.contact-subtitle {
+.portfolio-body .contact-subtitle {
   font-size: 20px;
   color: var(--muted);
   margin-bottom: 50px;
 }
 
-.contact-form {
+.portfolio-body .contact-form {
   max-width: 500px;
   margin: 0 auto 50px;
   display: flex;
@@ -236,11 +244,11 @@
   text-align: left;
 }
 
-.form-group {
+.portfolio-body .form-group {
   width: 100%;
 }
 
-.form-input {
+.portfolio-body .form-input {
   width: 100%;
   background-color: var(--surface);
   border: 1px solid var(--border);
@@ -253,22 +261,22 @@
   transition: all 0.3s ease;
 }
 
-.form-input::placeholder {
+.portfolio-body .form-input::placeholder {
   color: #666666;
 }
 
-.form-input:focus {
+.portfolio-body .form-input:focus {
   border-color: #55555a;
   background-color: #1a1a1c;
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
 }
 
-textarea.form-input {
+.portfolio-body textarea.form-input {
   resize: vertical;
   min-height: 140px;
 }
 
-.submit-button {
+.portfolio-body .submit-button {
   background-color: var(--text);
   color: var(--bg);
   padding: 18px 32px;
@@ -285,65 +293,65 @@ textarea.form-input {
   text-align: center;
 }
 
-.submit-button:hover {
+.portfolio-body .submit-button:hover {
   opacity: 0.9;
   transform: scale(1.02);
 }
 
-.social-links {
+.portfolio-body .social-links {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.social-links a {
+.portfolio-body .social-links a {
   color: var(--muted);
   font-size: 14px;
   transition: color 0.3s;
 }
 
-.social-links a:hover {
+.portfolio-body .social-links a:hover {
   color: var(--text);
 }
 
 @media (max-width: 767px) {
-  .section-title {
+  .portfolio-body .section-title {
     font-size: 36px;
     margin-bottom: 40px;
   }
 
-  .contact-section {
+  .portfolio-body .contact-section {
     padding: 96px 20px;
   }
 
-  .contact-subtitle {
+  .portfolio-body .contact-subtitle {
     font-size: 18px;
   }
 
-  .gallery-wrapper {
+  .portfolio-body .gallery-wrapper {
     padding-left: 20px;
   }
 
-  .gallery-card {
+  .portfolio-body .gallery-card {
     width: 86vw;
     height: 280px;
   }
 }
 
 @media (min-width: 768px) {
-  .grid-layout {
+  .portfolio-body .grid-layout {
     grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
 
-  .gallery-wrapper {
+  .portfolio-body .gallery-wrapper {
     padding-left: 20px;
   }
 }
 
-#tech-specs,
-#gallery,
-#contact {
+.portfolio-body #tech-specs,
+.portfolio-body #gallery,
+.portfolio-body #contact {
   padding-block: 80px;
 }
