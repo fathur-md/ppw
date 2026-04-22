@@ -1,19 +1,51 @@
-# Tugas Praktikum Pemrograman Web 🚀
+# Praktikum Pemrograman Web
 
-Repositori ini berisi _prototype_ antarmuka portofolio digital. Project ini dibuat khusus untuk memenuhi tugas mata kuliah Praktikum Pemrograman Web.
+Repositori ini berisi rangkaian halaman web sederhana yang dikerjakan sebagai bagian dari pembelajaran Praktikum Pemrograman Web. Isi proyek disusun mengikuti materi pertemuan perkuliahan dari pengantar HTML dan CSS, pengenalan antarmuka, hingga dasar PHP, database, dan CRUD.
 
-> **⚠️ DISKLAIMER:**
-> Website ini saat ini berstatus sebagai **tugas kuliah / purwarupa (prototype)**, bukan representasi portofolio profesional asli yang sudah sepenuhnya aktif. Data keahlian, persentase _skill_, dan elemen di dalamnya masih berupa _dummy_ (contoh) yang akan terus dikembangkan secara bertahap hingga akhir semester.
+## Tujuan Pembelajaran
 
-## Teknologi yang Digunakan
+Proyek ini dirancang untuk mendukung CPMK berikut:
+
+- Memahami struktur dasar dokumen HTML dan styling dengan CSS.
+- Menerapkan prinsip desain user interface dan pembuatan antarmuka front-end.
+- Mengenal penggunaan CSS framework.
+- Memahami dasar PHP, library, fungsi, dan manajemen source code.
+- Menerapkan pengujian aplikasi serta integrasi database MySQL dengan operasi CRUD.
+- Menyusun dan mempresentasikan proyek akhir berdasarkan kebutuhan pengguna.
+
+## Rencana Pertemuan Perkuliahan
+
+| Pertemuan | Materi                                                                                            |
+| --------- | ------------------------------------------------------------------------------------------------- |
+| 1         | Pengantar Pemrograman Web                                                                         |
+| 2         | Struktur Dasar HTML                                                                               |
+| 3         | Styling dengan CSS                                                                                |
+| 4         | Desain User Interface                                                                             |
+| 5         | Pembuatan Antarmuka Front-End                                                                     |
+| 6         | Pengenalan CSS Framework                                                                          |
+| 7         | UTS                                                                                               |
+| 8         | Pengenalan PHP                                                                                    |
+| 9         | Konsep Library di PHP                                                                             |
+| 10        | Menyusun Fungsi dan Manajemen Source Code                                                         |
+| 11        | Pengenalan Pengujian Aplikasi                                                                     |
+| 12        | Pembuatan dan Integrasi Database dengan Operasi CRUD menggunakan MySQL                            |
+| 13        | Implementasi Aplikasi CRUD                                                                        |
+| 14        | Presentasi proyek akhir: analisis kebutuhan pengguna, desain solusi, dan demonstrasi aplikasi web |
+| 15        | UAS                                                                                               |
+
+## Struktur Proyek
+
+- `index.html` - halaman utama.
+- `about/` - halaman profil atau informasi tentang proyek.
+- `portfolio/` - halaman portofolio.
+- `archive/` - kumpulan materi dan latihan.
+- `assets/css/` - kumpulan stylesheet untuk masing-masing bagian halaman.
+
+## Teknologi Yang Digunakan
 
 - HTML5
-- CSS
+- CSS3
 
----
+## Catatan
 
-**⛔ PERHATIAN:**
-
-**Mohon untuk tidak menyalin, mendistribusikan, atau menyalahgunakan data, gambar (termasuk foto profil), teks, maupun informasi apa pun yang terdapat di dalam repositori dan website ini untuk kepentingan di luar evaluasi tugas akademik tanpa izin.**
-
----
+Repositori ini bersifat sebagai media pembelajaran dan dokumentasi tugas kuliah. Beberapa konten mungkin masih berupa contoh atau bahan latihan yang akan berkembang mengikuti materi perkuliahan.
