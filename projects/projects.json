@@ -14,5 +14,13 @@
     "judul": "Car Rental",
     "desc": "Sebuah aplikasi web untuk menyewa mobil dengan fitur pencarian, pemesanan, dan manajemen kendaraan.",
     "badge": "HTML + CSS"
+  },
+  {
+    "link": "asn_frontend",
+    "kode": "ASN Front-End",
+    "tahun": "2026",
+    "judul": "Website Platform Freelance",
+    "desc": "Website platform freelance yang terdiri dari halaman utama, tentang, dan kontak. Menampilkan informasi layanan, profil, serta form kontak dengan desain sederhana menggunakan HTML dan CSS.",
+    "badge": "HTML + CSS"
   }
 ]
