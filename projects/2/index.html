@@ -7,15 +7,38 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <a href="../index.html" style="position: fixed; bottom: 0">
+      <button
+        style="
+          padding: 10px 20px;
+          border-radius: 30px;
+          border: none;
+          background: rgb(81, 126, 198);
+          color: white;
+          font-size: 16px;
+          cursor: pointer;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          transition:
+            background 0.3s,
+            transform 0.3s;
+        "
+      >
+        ← Kembali
+      </button>
+    </a>
     <nav>
-      <a href="#" style="font-weight: bold">
-        CAR<span style="font-weight: 300; color: rgb(189, 63, 18)">Rental</span>
-      </a>
-      <ul>
-        <li><a href="#cars">Cars</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <div class="nav-child">
+        <a href="#" style="font-weight: bold">
+          CAR<span style="font-weight: 300; color: rgb(189, 63, 18)"
+            >Rental</span
+          >
+        </a>
+        <ul>
+          <li><a href="#cars">Cars</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
     <div id="search">

@@ -1,0 +1,18 @@
+[
+  {
+    "link": "1",
+    "kode": "Pertemuan 1",
+    "tahun": "2026",
+    "judul": "Portfolio Sederhana",
+    "desc": "Sebuah website sederhana yang menampilkan portfolio pribadi dengan informasi dasar dan tampilan menarik.",
+    "badge": "HTML + CSS"
+  },
+  {
+    "link": "2",
+    "kode": "Pertemuan 3",
+    "tahun": "2026",
+    "judul": "Car Rental",
+    "desc": "Sebuah aplikasi web untuk menyewa mobil dengan fitur pencarian, pemesanan, dan manajemen kendaraan.",
+    "badge": "HTML + CSS"
+  }
+]
