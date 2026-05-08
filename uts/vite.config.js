@@ -1,0 +1,16 @@
+import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite";
+import { resolve } from "path";
+
+export default defineConfig({
+  base: "/ppw/uts/",
+  plugins: [tailwindcss()],
+  build: {
+    outDir: "public",
+    rollupOptions: {
+      input: resolve("index.html"),
+      about: resolve("about/index.html"),
+      contact: resolve("contact/index.html"),
+    },
+  },
+});
