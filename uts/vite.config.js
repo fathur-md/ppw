@@ -6,7 +6,7 @@ export default defineConfig({
   base: "/ppw/uts/",
   plugins: [tailwindcss()],
   build: {
-    outDir: "public",
+    outDir: "dist",
     rollupOptions: {
       input: resolve("index.html"),
       about: resolve("about/index.html"),
