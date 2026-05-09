@@ -1,5 +1,7 @@
 export function initNavbar() {
-  const root = window.location.pathname.includes("/ppw/uts") ? "/ppw/uts" : "/";
+  const root = window.location.pathname.includes("/ppw/uts/")
+    ? "/ppw/uts"
+    : "/";
   const navbarHTML = `
     <nav class="flex w-full bg-gray-50">
         <div class="flex flex-col w-full items-center gap-2 p-4 max-w-5xl mx-auto text-sm font-normal">
