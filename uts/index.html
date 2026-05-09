@@ -18,20 +18,52 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h1>Fathur Stream</h1>
-    <p>Welcome to the UTS page!</p>
+    <h1>This is H1</h1>
+    <h2>This is H2</h2>
+    <h3>This is H3</h3>
+    <p>This is a paragraph.</p>
 
     <div id="movie-grid"></div>
 
-    <template id="movie-template">
-      <div class="movie-card">
-        <img src="" alt="" class="movie-poster" />
-        <div class="info">
-          <h3 class="movie-title"></h3>
-          <span class="movie-rating"></span>
-        </div>
-      </div>
-    </template>
     <script src="js/script.js"></script>
+
+    <!-- DEBUG -->
+
+    <script>
+      // TESTER SEDERHANA
+      async function cekPipaData() {
+        const statusBox = document.getElementById("movie-grid");
+        statusBox.innerHTML = "🔍 Sedang mengetes koneksi ke Backend...";
+
+        // 1. Tentukan URL secara cerdas
+        const IS_PROD = window.location.hostname.includes("github.io");
+        const URL_NETLIFY =
+          "https://nama-proyek-netlify-kamu.netlify.app/.netlify/functions/movie"; // <-- GANTI INI
+        const URL_LOCAL = "http://localhost:8888/.netlify/functions/movie";
+
+        const TARGET = IS_PROD ? URL_NETLIFY : URL_LOCAL;
+
+        try {
+          const resp = await fetch(TARGET);
+          if (resp.ok) {
+            const data = await resp.json();
+            statusBox.innerHTML = `✅ KONEKSI BERHASIL!<br>Terdeteksi ${data.results.length} film dari TMDB.`;
+            statusBox.style.color = "#00ff00";
+            console.log("Data sukses:", data);
+          } else {
+            const err = await resp.json();
+            statusBox.innerHTML = `❌ DITOLAK SATPAM: ${err.error}`;
+            statusBox.style.color = "#ff4444";
+          }
+        } catch (e) {
+          statusBox.innerHTML = `❌ GAGAL TOTAL: Cek apakah URL sudah benar atau Netlify Dev sudah jalan.`;
+          statusBox.style.color = "#ff4444";
+        }
+      }
+
+      cekPipaData();
+    </script>
+
+    <!-- <script src="js/debug.js"></script> -->
   </body>
 </html>
