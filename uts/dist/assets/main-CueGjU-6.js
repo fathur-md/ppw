@@ -1,0 +1,1 @@
+import{t as e}from"./navbar-BJOXNt6m.js";window.addEventListener(`DOMContentLoaded`,()=>{e()});

@@ -3,13 +3,16 @@ import tailwindcss from "@tailwindcss/vite";
 import { resolve } from "path";
 
 export default defineConfig({
+  base: "",
   plugins: [tailwindcss()],
   build: {
     outDir: "dist",
     rollupOptions: {
-      input: resolve("index.html"),
-      about: resolve("about/index.html"),
-      contact: resolve("contact/index.html"),
+      input: {
+        main: resolve(__dirname, "index.html"),
+        about: resolve(__dirname, "about/index.html"),
+        contact: resolve(__dirname, "contact/index.html"),
+      },
     },
   },
 });
