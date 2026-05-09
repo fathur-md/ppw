@@ -12,4 +12,4 @@
             </ul>
         </div>
     </nav>
-  `}export{e as t};
+  `}window.addEventListener(`DOMContentLoaded`,()=>{e();let t=window.location.pathname,n=`Home`;t.includes(`/about/`)?n=`About`:t.includes(`/contact/`)&&(n=`Contact`),document.title=`${n} - UTS`});

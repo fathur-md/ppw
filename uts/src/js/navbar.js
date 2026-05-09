@@ -1,4 +1,6 @@
 export function initNavbar() {
+
+  
   const header = document.querySelector("header");
   if (!header) return;
 
