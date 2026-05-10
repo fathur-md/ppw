@@ -13,6 +13,9 @@ async function init() {
 
   random.trailerKey = videoId;
 
+  console.log("MOVIE:", movies);
+  console.log("VIDEO ID:", videoId);
+
   renderHero(random);
 }
 
