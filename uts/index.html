@@ -16,54 +16,125 @@
     />
     <title>Fathur Stream</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/hero.css" />
   </head>
-  <body>
-    <h1>This is H1</h1>
-    <h2>This is H2</h2>
-    <h3>This is H3</h3>
-    <p>This is a paragraph.</p>
+  <body class="">
+    <header>
+      <div id="navbar" class="navbar"></div>
+    </header>
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-skeleton">
+          <div class="skeleton-overlay"></div>
 
-    <div id="movie-grid"></div>
+          <div class="skeleton-content">
+            <div class="skeleton-badge"></div>
+            <div class="skeleton-title"></div>
+            <div class="skeleton-desc"></div>
 
-    <script src="js/script.js"></script>
+            <div class="skeleton-actions">
+              <div class="skeleton-btn"></div>
+              <div class="skeleton-btn"></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- DEBUG -->
+      <section id="movie-sections" class="hidden">
+        <div class="hero-skeleton">
+          <div class="skeleton-overlay"></div>
 
-    <script>
-      // TESTER SEDERHANA
-      async function cekPipaData() {
-        const statusBox = document.getElementById("movie-grid");
-        statusBox.innerHTML = "🔍 Sedang mengetes koneksi ke Backend...";
+          <div class="skeleton-content">
+            <div class="skeleton-badge"></div>
+            <div class="skeleton-title"></div>
+            <div class="skeleton-desc"></div>
 
-        // 1. Tentukan URL secara cerdas
-        const IS_PROD = window.location.hostname.includes("github.io");
-        const URL_NETLIFY =
-          "https://fathur-stream-backend.netlify.app/.netlify/functions/movie"; // <-- GANTI INI
-        const URL_LOCAL = "http://localhost:8888/.netlify/functions/movie";
+            <div class="skeleton-actions">
+              <div class="skeleton-btn"></div>
+              <div class="skeleton-btn"></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        const TARGET = IS_PROD ? URL_NETLIFY : URL_LOCAL;
+      <section class="premium-section">
+        <div class="premium-container">
+          <div class="premium-header">
+            <span class="premium-badge"> PREMIUM ACCESS </span>
 
-        try {
-          const resp = await fetch(TARGET);
-          if (resp.ok) {
-            const data = await resp.json();
-            statusBox.innerHTML = `✅ KONEKSI BERHASIL!<br>Terdeteksi ${data.results.length} film dari TMDB.`;
-            statusBox.style.color = "#00ff00";
-            console.log("Data sukses:", data);
-          } else {
-            const err = await resp.json();
-            statusBox.innerHTML = `❌ DITOLAK SATPAM: ${err.error}`;
-            statusBox.style.color = "#ff4444";
-          }
-        } catch (e) {
-          statusBox.innerHTML = `❌ GAGAL TOTAL: Cek apakah URL sudah benar atau Netlify Dev sudah jalan.`;
-          statusBox.style.color = "#ff4444";
-        }
-      }
+            <h2 class="premium-title">
+              Nikmati pengalaman streaming tanpa batas.
+            </h2>
 
-      cekPipaData();
-    </script>
+            <p class="premium-desc">
+              Buka akses trailer eksklusif, kualitas video lebih tinggi, dan
+              pengalaman sinematik tanpa gangguan.
+            </p>
+          </div>
 
-    <!-- <script src="js/debug.js"></script> -->
+          <div class="premium-grid">
+            <div class="premium-benefits">
+              <div class="premium-card">
+                <i data-lucide="sparkles"></i>
+
+                <h3>Trailer Eksklusif</h3>
+
+                <p>Akses trailer terbaru sebelum rilis publik.</p>
+              </div>
+
+              <div class="premium-card">
+                <i data-lucide="monitor-play"></i>
+
+                <h3>Kualitas Tinggi</h3>
+
+                <p>Streaming cinematic dengan pengalaman lebih imersif.</p>
+              </div>
+
+              <div class="premium-card">
+                <i data-lucide="badge-check"></i>
+
+                <h3>Premium Experience</h3>
+
+                <p>Tampilan modern tanpa batasan akses.</p>
+              </div>
+            </div>
+
+            <div class="pricing-card">
+              <div class="pricing-top">
+                <span class="pricing-plan"> Premium Plan </span>
+
+                <h3 class="pricing-price">
+                  Rp49K
+                  <span>/bulan</span>
+                </h3>
+              </div>
+
+              <ul class="pricing-list">
+                <li>
+                  <i data-lucide="check"></i>
+                  Unlimited trailer access
+                </li>
+
+                <li>
+                  <i data-lucide="check"></i>
+                  Early access content
+                </li>
+
+                <li>
+                  <i data-lucide="check"></i>
+                  Ultra cinematic experience
+                </li>
+              </ul>
+
+              <button class="pricing-btn">Mulai Berlangganan</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer"></footer>
+    <script type="module" src="/js/ui.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
