@@ -1,6 +1,6 @@
 import { Icons } from "../utils/icons.js";
 
-const BASE_PATH = window.location.pathname.includes("/uts") ? "/uts" : "";
+const BASE_PATH = "/ppw/uts";
 
 export function renderNavbar() {
   const navRoot = document.getElementById("navbar");
