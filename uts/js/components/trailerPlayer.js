@@ -1,9 +1,9 @@
 import { Icons } from "../utils/icons.js";
 
 export function playerTrailer(videoId, title = "") {
-  console.log("top player trailer");
+  console.log("top player trailer, videoId:", videoId, "title:", title);
   console.log("videoId:", videoId);
-  
+
   if (!videoId) return;
 
   console.log("!videoId berhasil lolos");
