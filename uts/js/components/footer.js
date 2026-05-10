@@ -1,13 +1,6 @@
+const BASE_PATH = window.location.pathname.includes("/uts") ? "/uts" : "";
+
 export function renderFooter() {
-  const currentPath = window.location.pathname;
-
-  const isSubFolder =
-    currentPath.includes("/film/") ||
-    currentPath.includes("/serial-tv/") ||
-    currentPath.includes("/langganan/");
-
-  const base = isSubFolder ? "../" : "./";
-
   return `
     <div class="footer">
 
@@ -17,10 +10,7 @@ export function renderFooter() {
 
           <div class="footer-brand">
 
-            <a
-              href="${base}"
-              class="footer-logo"
-            >
+            <a href="${BASE_PATH}/" class="footer-logo">
               Fathur<span>Stream</span>
             </a>
 
@@ -36,41 +26,21 @@ export function renderFooter() {
 
             <div class="footer-column">
 
-              <h3 class="footer-title">
-                Navigasi
-              </h3>
+              <h3 class="footer-title">Navigasi</h3>
 
-              <a href="${base}">
-                Beranda
-              </a>
-
-              <a href="${base}film/">
-                Film
-              </a>
-
-              <a href="${base}serial-tv/">
-                Serial TV
-              </a>
+              <a href="${BASE_PATH}/">Beranda</a>
+              <a href="${BASE_PATH}/film/">Film</a>
+              <a href="${BASE_PATH}/serial-tv/">Serial TV</a>
 
             </div>
 
             <div class="footer-column">
 
-              <h3 class="footer-title">
-                Informasi
-              </h3>
+              <h3 class="footer-title">Informasi</h3>
 
-              <a href="${base}tentang/">
-                Tentang
-              </a>
-
-              <a href="${base}langganan/">
-                Paket Premium
-              </a>
-
-              <a href="${base}kontak/">
-                Kontak
-              </a>
+              <a href="#">Tentang</a>
+              <a href="${BASE_PATH}/langganan/">Paket Premium</a>
+              <a href="#">Kontak</a>
 
             </div>
 
@@ -81,8 +51,7 @@ export function renderFooter() {
         <div class="footer-bottom">
 
           <p class="footer-copy">
-            © 2026 FathurStream.
-            All rights reserved.
+            © 2026 FathurStream. All rights reserved.
           </p>
 
           <p class="footer-note">

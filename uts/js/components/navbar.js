@@ -1,25 +1,24 @@
 import { Icons } from "../utils/icons.js";
 
+const BASE_PATH = window.location.pathname.includes("/uts") ? "/uts" : "";
+
 export function renderNavbar() {
   const navRoot = document.getElementById("navbar");
   if (!navRoot) return;
 
-  const currentPath = window.location.pathname;
+  const currentPath = normalize(window.location.pathname);
 
   const navItems = [
-    { name: "Beranda", path: "/" },
-    { name: "Film", path: "/film/" },
-    { name: "Serial TV", path: "/serial-tv/" },
-    { name: "Langganan", path: "/langganan/" },
+    { name: "Beranda", path: `${BASE_PATH}/` },
+    { name: "Film", path: `${BASE_PATH}/film/` },
+    { name: "Serial TV", path: `${BASE_PATH}/serial-tv/` },
+    { name: "Langganan", path: `${BASE_PATH}/langganan/` },
   ];
-
-  const normalize = (p) => p.replace(/\/index\.html$/, "").replace(/\/$/, "");
-  const current = normalize(currentPath);
 
   navRoot.innerHTML = `
     <nav class="nav-wrapper" aria-label="Navigasi Utama">
 
-      <a href="/" class="logo-link">
+      <a href="${BASE_PATH}" class="logo-link">
         Fathur<span class="logo-span">
           Stream
         </span>
@@ -42,7 +41,7 @@ export function renderNavbar() {
               <li>
                 <a 
                   href="${item.path}"
-                  class="${normalize(item.path) === current ? "active" : ""}">
+                  class="${normalize(item.path) === currentPath ? "active" : ""}">
                   ${item.name}
                 </a>
               </li>
@@ -57,6 +56,10 @@ export function renderNavbar() {
 
   setupMenuToggle();
   setupNavbarScroll();
+}
+
+function normalize(path) {
+  return path.replace(/\/index\.html$/, "").replace(/\/$/, "");
 }
 
 function setupMenuToggle() {
@@ -121,32 +124,3 @@ function setupNavbarScroll() {
 
   navbarScrollInitialized = true;
 }
-
-// function setupNavbarScroll() {
-//   if (navbarScrollInitialized) return;
-
-//   const header = document.querySelector("header");
-
-//   if (!header) return;
-
-//   let ticking = false;
-
-//   const updateNavbar = () => {
-//     header.classList.toggle("scrolled", window.scrollY > 50);
-
-//     ticking = false;
-//   };
-
-//   window.addEventListener(
-//     "scroll",
-//     () => {
-//       if (!ticking) {
-//         requestAnimationFrame(updateNavbar);
-//         ticking = true;
-//       }
-//     },
-//     { passive: true },
-//   );
-
-//   navbarScrollInitialized = true;
-// }
