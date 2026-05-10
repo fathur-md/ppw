@@ -8,12 +8,6 @@ export function renderNavbar() {
 
   const currentPath = normalize(window.location.pathname);
 
-  if (currentPath === "/uts") {
-    console.log(currentPath);
-  } else {
-    console.log(currentPath);
-  }
-
   const navItems = [
     { name: "Beranda", path: `${BASE}/` },
     { name: "Film", path: `${BASE}/film/` },

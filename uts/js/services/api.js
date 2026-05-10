@@ -6,9 +6,12 @@ async function request(url) {
   return res.json();
 }
 
-export async function fetchData(type = "trending") {
+export async function fetchData(type = "movie", category = "popular") {
   try {
-    const data = await request(`${CONFIG.BASE_URL}?type=${type}`);
+    const data = await request(
+      `${CONFIG.BASE_URL}?type=${type}&category=${category}`,
+    );
+
     return data.results || [];
   } catch (error) {
     console.error(`Error fetching data (${type}):`, error);
@@ -19,12 +22,14 @@ export async function fetchData(type = "trending") {
 export async function fetchVideoId(id, type = "movie") {
   try {
     const data = await request(
-      `${CONFIG.BASE_URL}/video?id=${id}&type=${type}`,
+      `${CONFIG.BASE_URL}?type=${type}&category=videos&id=${id}`,
     );
 
-    const trailer = data.results?.find(
-      (v) => v.type === "Trailer" && v.site === "YouTube",
-    );
+    const trailer =
+      data.results?.find(
+        (v) =>
+          v.site === "YouTube" && (v.type === "Trailer" || v.type === "Teaser"),
+      ) || data.results?.find((v) => v.site === "YouTube");
 
     return trailer?.key || null;
   } catch (err) {

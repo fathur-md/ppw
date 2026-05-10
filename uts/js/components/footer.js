@@ -1,4 +1,4 @@
-const BASE_PATH = "/ppw/uts";
+const BASE_PATH = location.hostname.includes("github.io") ? "/ppw/uts" : "";
 
 export function renderFooter() {
   return `

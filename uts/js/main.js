@@ -2,16 +2,17 @@ import { renderHero } from "./components/hero.js";
 import { fetchData, fetchVideoId } from "./services/api.js";
 
 async function init() {
-  console.log("test init: ", window.location.hostname);
+  console.log("test init");
 
-  const trending = await fetchData("trending");
+  const movies = await fetchData("movie", "popular");
 
-  if (!trending.length) return;
+  if (!movies.length) return;
 
-  const random = trending[Math.floor(Math.random() * trending.length)];
-  const videoId = await fetchVideoId(random.id, random.media_type || "movie");
+  const random = movies[Math.floor(Math.random() * movies.length)];
+  const videoId = await fetchVideoId(random.id, "movie");
 
   random.trailerKey = videoId;
+
   renderHero(random);
 }
 
