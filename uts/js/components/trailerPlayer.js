@@ -1,8 +1,11 @@
 import { Icons } from "../utils/icons.js";
 
 export function playerTrailer(videoId, title = "") {
+  console.log("top player trailer");
+
   if (!videoId) return;
 
+  console.log("!videoId berhasil lolos");
   const old = document.getElementById("trailer-player");
   if (old) old.remove();
 

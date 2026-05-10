@@ -60,8 +60,6 @@ export function renderHero(movie) {
   `;
 
   btnPlay.onclick = () => {
-    console.log(movie);
-
     playerTrailer(movie.trailerKey, movie.title || movie.name);
   };
 
