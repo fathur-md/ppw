@@ -2,7 +2,7 @@ import { renderHero } from "./components/hero.js";
 import { fetchData, fetchVideoId } from "./services/api.js";
 
 async function init() {
-  console.log("test init");
+  console.log("test init: ", window.location.hostname);
 
   const trending = await fetchData("trending");
 

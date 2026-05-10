@@ -1,6 +1,6 @@
 import { Icons } from "../utils/icons.js";
 
-const BASE_PATH = "/ppw/uts";
+const BASE = location.hostname.includes("github.io") ? "/ppw/uts" : "";
 
 export function renderNavbar() {
   const navRoot = document.getElementById("navbar");
@@ -8,17 +8,23 @@ export function renderNavbar() {
 
   const currentPath = normalize(window.location.pathname);
 
+  if (currentPath === "/uts") {
+    console.log(currentPath);
+  } else {
+    console.log(currentPath);
+  }
+
   const navItems = [
-    { name: "Beranda", path: `${BASE_PATH}/` },
-    { name: "Film", path: `${BASE_PATH}/film/` },
-    { name: "Serial TV", path: `${BASE_PATH}/serial-tv/` },
-    { name: "Langganan", path: `${BASE_PATH}/langganan/` },
+    { name: "Beranda", path: `${BASE}/` },
+    { name: "Film", path: `${BASE}/film/` },
+    { name: "Serial TV", path: `${BASE}/serial-tv/` },
+    { name: "Langganan", path: `${BASE}/langganan/` },
   ];
 
   navRoot.innerHTML = `
     <nav class="nav-wrapper" aria-label="Navigasi Utama">
 
-      <a href="${BASE_PATH}" class="logo-link">
+      <a href="${BASE}" class="logo-link">
         Fathur<span class="logo-span">
           Stream
         </span>

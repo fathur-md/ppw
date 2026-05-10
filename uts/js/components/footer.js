@@ -1,4 +1,4 @@
-const BASE_PATH = window.location.pathname.includes("/uts") ? "/uts" : "";
+const BASE_PATH = "/ppw/uts";
 
 export function renderFooter() {
   return `

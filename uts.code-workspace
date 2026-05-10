@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "./uts",
+    },
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/projects": true,
+      "**/assets": true,
+    },
+  },
+}
