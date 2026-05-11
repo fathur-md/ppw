@@ -241,7 +241,7 @@ nav {
 
 .about-section {
   text-align: center;
-  padding: 4rem 0;
+  padding: 120px 0 0 0;
 }
 
 .section-tag {
@@ -281,9 +281,11 @@ nav {
 }
 
 .ceo-img img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 #page-services {
@@ -384,6 +386,18 @@ footer {
 
   .ceo-card {
     flex-direction: row;
+    gap: 4rem;
+  }
+
+  .ceo-img {
+    flex-shrink: 0;
+  }
+
+  .ceo-info {
+    text-align: left;
+  }
+  .ceo-info p {
+    font-size: 15px;
   }
 
   .pricing-grid {
