@@ -1,5 +1,5 @@
 import { renderNavbar } from "./components/navbar.js";
-import { getTopHeadlines } from "./services/api.js";
+import { getNews } from "./services/api.js";
 
 async function init() {
   renderNavbar("home");
@@ -11,18 +11,20 @@ async function renderHomeNews() {
   if (!container) return;
 
   try {
-    const news = await getTopHeadlines("technology");
+    const news = await getNews("general");
 
     container.innerHTML = news
       .map(
         (item) => `
-      <div class="card">
-        <img src="${item.urlToImage || ""}" alt="">
-        <div class="card-body">
-          <h3>${item.title}</h3>
-          <p>${item.description || ""}</p>
+     <a href="${item.url}" target="_blank">
+        <div class="card">
+          <img src="${item.image || ""}" alt="">
+          <div class="card-body">
+            <h3>${item.title}</h3>
+            <p>${item.text || ""}</p>
+          </div>
         </div>
-      </div>
+      </a>
     `,
       )
       .join("");

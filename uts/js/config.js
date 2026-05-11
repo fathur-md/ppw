@@ -1,14 +1,11 @@
 export const CONFIG = {
   BASE_PATH: "/ppw/uts",
 
-  API_URL: "https://newsapi.org/v2",
+  API_URL: "https://api.worldnewsapi.com/search-news",
 
-  // 🔑 API KEY (isi sendiri)
-  API_KEY: "a1ebdbc0e9a34e84b14103b6f4d545e0",
+  API_KEY: "fd490af391004b89bcb35854675b42f0",
 
-  // 🌍 default country
-  COUNTRY: "us",
+  DEFAULT_QUERY: "indonesia",
 
-  // 📌 default category
-  DEFAULT_CATEGORY: "general",
+  LANGUAGE: "id",
 };
