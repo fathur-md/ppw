@@ -1,0 +1,86 @@
+{
+  "status": "ok",
+  "totalResults": 10,
+  "news": [
+    {
+      "title": "Perkembangan AI Semakin Pesat di Industri Global",
+      "description": "Kecerdasan buatan kini digunakan di berbagai sektor seperti kesehatan, pendidikan, dan industri kreatif untuk meningkatkan efisiensi kerja.",
+      "url": "https://example.com/news/1",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+      "publishedAt": "2026-01-10T08:00:00Z",
+      "source": { "name": "FathurNEWS" }
+    },
+    {
+      "title": "Indonesia Perkuat Ekonomi Digital Nasional",
+      "description": "Pemerintah terus mendorong transformasi digital UMKM agar mampu bersaing di pasar global melalui platform online.",
+      "url": "https://example.com/news/2",
+      "image": "https://images.unsplash.com/photo-1556742031-c6961e8560b0",
+      "publishedAt": "2026-01-09T10:00:00Z",
+      "source": { "name": "FathurNEWS" }
+    },
+    {
+      "title": "Teknologi Energi Surya Semakin Efisien",
+      "description": "Penelitian terbaru menunjukkan peningkatan efisiensi panel surya yang dapat menurunkan biaya energi jangka panjang.",
+      "url": "https://example.com/news/3",
+      "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276",
+      "publishedAt": "2026-01-08T09:30:00Z",
+      "source": { "name": "FathurNEWS" }
+    },
+    {
+      "title": "Transportasi Listrik Mulai Diterapkan di Kota Besar",
+      "description": "Bus dan kendaraan listrik mulai digunakan untuk mengurangi polusi udara di wilayah perkotaan.",
+      "url": "https://example.com/news/4",
+      "image": "https://images.unsplash.com/photo-1593941707882-a5bba53c8cbd",
+      "publishedAt": "2026-01-07T11:20:00Z",
+      "source": { "name": "FathurNEWS" }
+    },
+    {
+      "title": "Tren Startup Teknologi di Asia Tenggara Meningkat",
+      "description": "Investor global semakin tertarik pada startup di kawasan Asia Tenggara karena pertumbuhan pengguna internet yang cepat.",
+      "url": "https://example.com/news/5",
+      "image": "https://images.unsplash.com/photo-1556761175-b413da4baf72",
+      "publishedAt": "2026-01-06T14:10:00Z",
+      "source": { "name": "FathurNEWS" }
+    },
+    {
+      "title": "Perubahan Iklim Jadi Fokus Utama Dunia",
+      "description": "Negara-negara di dunia memperkuat komitmen untuk menurunkan emisi karbon demi menjaga keberlanjutan bumi.",
+      "url": "https://example.com/news/6",
+      "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b",
+      "publishedAt": "2026-01-05T07:45:00Z",
+      "source": { "name": "FathurNEWS" }
+    },
+    {
+      "title": "Inovasi Teknologi Kesehatan Berbasis AI",
+      "description": "AI digunakan untuk membantu diagnosis penyakit lebih cepat dan akurat di berbagai rumah sakit modern.",
+      "url": "https://example.com/news/7",
+      "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d",
+      "publishedAt": "2026-01-04T12:00:00Z",
+      "source": { "name": "FathurNEWS" }
+    },
+    {
+      "title": "Ekosistem Digital UMKM Semakin Berkembang",
+      "description": "Pelaku UMKM kini semakin mudah menjangkau pasar luas melalui platform digital dan media sosial.",
+      "url": "https://example.com/news/8",
+      "image": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+      "publishedAt": "2026-01-03T09:10:00Z",
+      "source": { "name": "FathurNEWS" }
+    },
+    {
+      "title": "Teknologi Cloud Computing Dominasi Industri IT",
+      "description": "Perusahaan mulai beralih ke cloud untuk meningkatkan fleksibilitas dan efisiensi infrastruktur teknologi.",
+      "url": "https://example.com/news/9",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+      "publishedAt": "2026-01-02T15:30:00Z",
+      "source": { "name": "FathurNEWS" }
+    },
+    {
+      "title": "Perkembangan Jaringan 5G di Indonesia",
+      "description": "Jaringan 5G mulai diperluas untuk mendukung konektivitas yang lebih cepat di berbagai wilayah.",
+      "url": "https://example.com/news/10",
+      "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97",
+      "publishedAt": "2026-01-01T08:00:00Z",
+      "source": { "name": "FathurNEWS" }
+    }
+  ]
+}
