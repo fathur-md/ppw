@@ -20,7 +20,7 @@ async function renderHeadline() {
         (item, index) => `
       <div class="trending-item">
         <span class="trending-number">${index + 1}</span>
-        <div class="trending-content">
+        <div class="trending-content" onclick="window.open('${item.url}', '_black');">
           <h3>${item.title}</h3>
         </div>
       </div>
@@ -43,7 +43,7 @@ async function renderHomeNews() {
       .map(
         (item) => `
 
-        <article class="news-card">
+        <article class="news-card" onclick="window.open('${item.url}', '_black');">
           <div class="card-img">
             <img src="${item.image || ""}" alt="">
           </div>
