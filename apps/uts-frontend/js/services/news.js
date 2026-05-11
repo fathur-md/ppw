@@ -1,5 +1,5 @@
 async function loadMockNews() {
-  const res = await fetch("../uts/js/utils/news.json");
+  const res = await fetch("../uts-frontend/js/utils/news.json");
 
   if (!res.ok) {
     throw new Error(`Gagal memuat mock news: ${res.status}`);

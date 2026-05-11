@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "type": "Latihan 1 Praktikum",
+    "title": "Portfolio Sederhana",
+    "description": "Project pertama yang dideploy di github pages, menampilkan portfolio pribadi dengan informasi dasar dan tampilan menarik.",
+    "status": "Completed",
+    "img": "./assets/img/latihan1.png",
+    "link": "./apps/latihan-1",
+    "tags": ["HTML", "CSS", "TailwindCSS"]
+  },
+  {
+    "id": 2,
+    "type": "Latihan 2 Praktikum",
+    "title": "Car Rental",
+    "description": "Antarmuka manajemen data pegawai dengan fokus pada hierarki informasi yang bersih.",
+    "status": "Completed",
+    "img": "./assets/img/latihan2.png",
+    "link": "./apps/latihan-2",
+    "tags": ["HTML", "CSS"]
+  },
+  {
+    "id": 3,
+    "type": "ASN Frontend Praktikum",
+    "title": "HireMe Platform Freelance",
+    "description": "",
+    "status": "Completed",
+    "img": "./assets/img/hireme.png",
+    "link": "./apps/asn-frontend",
+    "tags": ["UI/UX", "Eco"]
+  },
+  {
+    "id": 4,
+    "type": "Project Praktikum",
+    "title": "My Portfolio",
+    "description": "Portfolio pribadi yang menampilkan berbagai proyek dan pengalaman dengan desain gelap yang elegan.",
+    "status": "Completed",
+    "img": "./assets/img/gemini-svg.svg",
+    "link": "./apps/main",
+    "tags": ["UI/UX"]
+  },
+  {
+    "id": 5,
+    "type": "ASN Teori",
+    "title": "Portfolio Professional",
+    "description": "",
+    "status": "Completed",
+    "img": "./assets/img/asn-wordpress.png",
+    "link": "https://fathur.infinityfree.me/",
+    "tags": ["Design", "WordPress"]
+  },
+  {
+    "id": 6,
+    "type": "UTS Teori",
+    "title": "PetCare+",
+    "description": "Satu aplikasi cerdas untuk konsultasi medis, produk premium, dan reservasi layanan. Dirancang untuk kemudahan Anda dan kesejahteraan mereka.",
+    "status": "Completed",
+    "img": "./assets/img/petcare-wordpress.png",
+    "link": "https://petcare.loveslife.biz",
+    "tags": ["Design", "Company Profile Website"]
+  },
+  {
+    "id": 7,
+    "type": "UTS Frontend Praktikum",
+    "title": "FathurNEWS",
+    "description": "Aplikasi berita yang menyajikan informasi terkini dengan antarmuka yang bersih dan mudah digunakan.",
+    "status": "Completed",
+    "img": "./assets/img/fathurnews.png",
+    "link": "./apps/uts-frontend",
+    "tags": ["Design", "Company Profile Website"]
+  }
+]
