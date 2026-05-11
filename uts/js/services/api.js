@@ -1,7 +1,7 @@
 import { CONFIG } from "../config.js";
 
 export async function getTopHeadlines(category = CONFIG.DEFAULT_CATEGORY) {
-  const url = `${CONFIG.API_URL}/top-headlines?country=${CONFIG.COUNTRY}&apiKey=${CONFIG.API_KEY}`;
+  const url = `${CONFIG.API_URL}/everything?q=${category}&language=id&sortBy=publishedAt&apiKey=${CONFIG.API_KEY}`;
 
   const res = await fetch(url);
 
