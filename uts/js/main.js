@@ -4,27 +4,27 @@ import { getNews } from "./services/api.js";
 async function init() {
   renderNavbar("home");
 
+  await renderHeadline();
   await renderHomeNews();
 }
-async function renderHomeNews() {
-  const container = document.getElementById("news");
+
+async function renderHeadline() {
+  const container = document.getElementById("headline");
   if (!container) return;
 
   try {
     const news = await getNews("general");
 
     container.innerHTML = news
+      .slice(0, 3)
       .map(
-        (item) => `
-     <a href="${item.url}" target="_blank">
-        <div class="card">
-          <img src="${item.image || ""}" alt="">
-          <div class="card-body">
-            <h3>${item.title}</h3>
-            <p>${item.text || ""}</p>
-          </div>
+        (item, index) => `
+      <div class="trending-item">
+        <span class="trending-number">${index + 1}</span>
+        <div class="trending-content">
+          <h3>${item.title}</h3>
         </div>
-      </a>
+      </div>
     `,
       )
       .join("");
@@ -33,4 +33,33 @@ async function renderHomeNews() {
     console.error(err);
   }
 }
+async function renderHomeNews() {
+  const container = document.getElementById("news-grid");
+  if (!container) return;
+
+  try {
+    const news = await getNews("general");
+
+    container.innerHTML = news
+      .map(
+        (item) => `
+
+        <article class="news-card">
+          <div class="card-img">
+            <img src="${item.image || ""}" alt="">
+          </div>
+          <span class="category-text">${item.category}</span>
+          <h4>${item.title}</h4>
+          <p>${item.text || ""}</p>
+        </article>
+
+    `,
+      )
+      .join("");
+  } catch (err) {
+    container.innerHTML = `<p>Gagal memuat berita</p>`;
+    console.error(err);
+  }
+}
+
 init();

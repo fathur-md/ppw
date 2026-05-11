@@ -42,7 +42,11 @@
   font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .trending-item {
@@ -52,10 +56,21 @@
   border-top: 1px solid var(--border-color);
 }
 
+.trending-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
 .trending-number {
   font-size: 1.5rem;
   font-weight: 900;
   color: #e5e5e7;
+}
+
+.trending-content p {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .news-grid {

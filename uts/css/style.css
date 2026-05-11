@@ -200,33 +200,8 @@ nav {
 }
 
 footer {
-  margin-top: 5rem;
-  padding: 5rem 0 3rem;
+  padding: 2rem;
   border-top: 1px solid var(--border-color);
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-.footer-cols {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.footer-col h5 {
-  font-size: 10px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.footer-col a {
-  color: var(--text-secondary);
-  font-size: 14px;
-  text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -252,14 +227,5 @@ footer {
 
   .pricing-grid {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .footer-cols {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
