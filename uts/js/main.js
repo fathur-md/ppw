@@ -1,8 +1,8 @@
 import { renderNavbar } from "./components/navbar.js";
-import { getNews } from "./services/api.js";
+import { getNews } from "./services/news.js";
 
 async function init() {
-  renderNavbar("home");
+  renderNavbar();
 
   await renderHeadline();
   await renderHomeNews();
@@ -13,8 +13,7 @@ async function renderHeadline() {
   if (!container) return;
 
   try {
-    const news = await getNews("general");
-
+    const news = await getNews();
     container.innerHTML = news
       .slice(0, 3)
       .map(
@@ -38,7 +37,7 @@ async function renderHomeNews() {
   if (!container) return;
 
   try {
-    const news = await getNews("general");
+    const news = await getNews();
 
     container.innerHTML = news
       .map(

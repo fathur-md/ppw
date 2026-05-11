@@ -1,4 +1,4 @@
-export function renderNavbar(active = "home") {
+export function renderNavbar() {
   const nav = document.getElementById("navbar");
 
   nav.innerHTML = `
