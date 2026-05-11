@@ -1,5 +1,5 @@
 import { renderNavbar } from "./components/navbar.js";
-import { renderFooter } from "./components/footer.js";
+// import { renderFooter } from "./components/footer.js";
 
 function safe(fn) {
   try {
@@ -10,7 +10,7 @@ function safe(fn) {
 }
 
 safe(() => renderNavbar());
-safe(() => {
-  const footer = document.getElementById("footer");
-  if (footer) footer.innerHTML = renderFooter();
-});
+// safe(() => {
+//   const footer = document.getElementById("footer");
+//   if (footer) footer.innerHTML = renderFooter();
+// });

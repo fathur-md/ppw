@@ -1,39 +1,13 @@
 import { CONFIG } from "../config.js";
 
-async function request(url) {
+export async function getTopHeadlines(category = CONFIG.DEFAULT_CATEGORY) {
+  const url = `${CONFIG.API_URL}/top-headlines?country=${CONFIG.COUNTRY}&apiKey=${CONFIG.API_KEY}`;
+
   const res = await fetch(url);
+
   if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-  return res.json();
-}
 
-export async function fetchData(type = "movie", category = "popular") {
-  try {
-    const data = await request(
-      `${CONFIG.BASE_URL}?type=${type}&category=${category}`,
-    );
+  const data = await res.json();
 
-    return data.results || [];
-  } catch (error) {
-    console.error(`Error fetching data (${type}):`, error);
-    return [];
-  }
-}
-
-export async function fetchVideoId(id, type = "movie") {
-  try {
-    const data = await request(
-      `${CONFIG.BASE_URL}?type=${type}&category=videos&id=${id}`,
-    );
-
-    const trailer =
-      data.results?.find(
-        (v) =>
-          v.site === "YouTube" && (v.type === "Trailer" || v.type === "Teaser"),
-      ) || data.results?.find((v) => v.site === "YouTube");
-
-    return trailer?.key || null;
-  } catch (err) {
-    console.error("fetchVideoId error:", err);
-    return null;
-  }
+  return data.articles || [];
 }

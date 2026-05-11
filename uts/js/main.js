@@ -1,22 +1,34 @@
-import { renderHero } from "./components/hero.js";
-import { fetchData, fetchVideoId } from "./services/api.js";
+import { renderNavbar } from "./components/navbar.js";
+import { getTopHeadlines } from "./services/api.js";
 
 async function init() {
-  console.log("test init");
+  renderNavbar("home");
 
-  const movies = await fetchData("movie", "popular");
-
-  if (!movies.length) return;
-
-  const random = movies[Math.floor(Math.random() * movies.length)];
-  const videoId = await fetchVideoId(random.id, "movie");
-
-  random.trailerKey = videoId;
-
-  console.log("MOVIE:", movies);
-  console.log("VIDEO ID:", videoId);
-
-  renderHero(random);
+  await renderHomeNews();
 }
+async function renderHomeNews() {
+  const container = document.getElementById("news");
+  if (!container) return;
 
+  try {
+    const news = await getTopHeadlines("technology");
+
+    container.innerHTML = news
+      .map(
+        (item) => `
+      <div class="card">
+        <img src="${item.urlToImage || ""}" alt="">
+        <div class="card-body">
+          <h3>${item.title}</h3>
+          <p>${item.description || ""}</p>
+        </div>
+      </div>
+    `,
+      )
+      .join("");
+  } catch (err) {
+    container.innerHTML = `<p>Gagal memuat berita</p>`;
+    console.error(err);
+  }
+}
 init();

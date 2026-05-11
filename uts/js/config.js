@@ -1,18 +1,14 @@
-const hostname = window.location.hostname;
-const port = window.location.port;
-
-const isLocalhost = hostname === "localhost" || hostname === "127.0.0.1";
-
-const isDevPort = port === "5500" || port === "8888";
-
-const isHotspot = hostname.startsWith("172.20.10.");
-
-const isDev = isLocalhost || isHotspot || isDevPort;
-
 export const CONFIG = {
-  IMG_URL: "https://image.tmdb.org/t/p/",
+  BASE_PATH: "/ppw/uts",
 
-  BASE_URL: isDev
-    ? "http://172.20.10.2:8888/.netlify/functions/api"
-    : "https://fathur-stream-backend.netlify.app/.netlify/functions/api",
+  API_URL: "https://newsapi.org/v2",
+
+  // 🔑 API KEY (isi sendiri)
+  API_KEY: "a1ebdbc0e9a34e84b14103b6f4d545e0",
+
+  // 🌍 default country
+  COUNTRY: "us",
+
+  // 📌 default category
+  DEFAULT_CATEGORY: "general",
 };

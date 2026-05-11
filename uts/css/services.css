@@ -1,0 +1,43 @@
+.pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.price-card {
+  background: var(--bg-gray);
+  padding: 3rem;
+  border-radius: var(--radius-xl);
+}
+
+.price-card.premium {
+  background: var(--text-main);
+  color: white;
+  transform: scale(1.05);
+}
+
+.card-badge {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: var(--accent-color);
+  padding: 0.25rem 0.75rem;
+  font-size: 9px;
+}
+
+.price-amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.feature-list {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+.btn-action {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: 800;
+}
