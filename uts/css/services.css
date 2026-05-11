@@ -1,19 +1,27 @@
+#page-services {
+  padding: 120px 1rem !important;
+}
+
 .pricing-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2.5rem;
+  margin-top: 4rem;
 }
 
 .price-card {
   background: var(--bg-gray);
   padding: 3rem;
   border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .price-card.premium {
   background: var(--text-main);
-  color: white;
-  transform: scale(1.05);
+  color: var(--bg-white);
+  position: relative;
 }
 
 .card-badge {
@@ -21,18 +29,28 @@
   top: 2rem;
   right: 2rem;
   background: var(--accent-color);
-  padding: 0.25rem 0.75rem;
   font-size: 9px;
+  font-weight: 900;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
 }
 
+.price-card h4 {
+  font-size: 1.25rem;
+}
 .price-amount {
   font-size: 2.5rem;
   font-weight: 800;
+  margin: 1rem 0;
 }
-
 .feature-list {
   list-style: none;
   margin: 2rem 0;
+}
+.feature-list li {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
 .btn-action {
@@ -40,4 +58,16 @@
   padding: 1rem;
   border-radius: 1rem;
   font-weight: 800;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  transition: var(--transition);
+}
+
+.price-card.premium .btn-action {
+  background: var(--accent-color);
+  color: white;
+}
+.price-card:not(.premium) .btn-action {
+  border: 2px solid #e5e5e7;
+  color: var(--text-main);
 }
