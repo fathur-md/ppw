@@ -31,8 +31,6 @@ body {
   line-height: 1.5;
   display: flex;
   flex-direction: column;
-
-  min-height: 200vh; /* Ensure enough height for scrolling */
 }
 main {
   flex: 1;
@@ -310,6 +308,7 @@ header {
   text-decoration: none;
   background: var(--surface);
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border);
 }
 
 .card img {
@@ -320,16 +319,14 @@ header {
   object-fit: cover;
   object-position: top;
   z-index: 1;
-  opacity: 0.8; /* Sedikit redup agar teks lebih menonjol */
+  opacity: 0.8;
   transition: transform 0.6s ease;
 }
 
-/* Overlay Gradien Lebih Tebal */
 .card::after {
   content: "";
   position: absolute;
   inset: 0;
-  /* Gradien 3 titik untuk transisi yang lebih halus dan gelap di bawah */
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.1) 0%,
@@ -349,13 +346,11 @@ header {
   justify-content: space-between;
 }
 
-/* Bagian Atas: Badge */
 .card-top {
   display: flex;
   justify-content: flex-end;
 }
 
-/* Bagian Bawah: Type & Title */
 .card-bottom {
   display: flex;
   flex-direction: column;
@@ -365,10 +360,9 @@ header {
 .type {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #38bdf8; /* Gunakan warna aksen biru agar 'type' jelas */
+  color: #38bdf8;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  /* Shadow tipis untuk proteksi jika bg terang */
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
@@ -377,7 +371,6 @@ header {
   font-weight: 700;
   color: #ffffff;
   line-height: 1.2;
-  /* Text shadow kuat agar judul 'keluar' dari background */
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
@@ -401,6 +394,17 @@ header {
 .card:hover img {
   transform: scale(1.1);
   opacity: 1;
+}
+
+footer {
+  margin-top: 5rem;
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  color: var(--text-secondary);
+  padding: 10px 0;
 }
 
 @media (max-width: 768px) {
