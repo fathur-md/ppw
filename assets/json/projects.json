@@ -33,7 +33,7 @@
     "date": "2026-04-02",
     "img": "./assets/img/hireme.png",
     "link": "./apps/asn-frontend",
-    "tags": ["UI/UX", "Company Profile Website"]
+    "tags": ["UI/UX", "Eco"]
   },
   {
     "id": 4,
@@ -77,7 +77,7 @@
     "type": "UTS Frontend Praktikum",
     "title": "FathurNEWS",
     "description": "Aplikasi berita yang menyajikan informasi terkini dengan antarmuka yang bersih dan mudah digunakan.",
-    "status": "On Progress",
+    "status": "Completed",
     "date": "2026-05-13",
     "img": "./assets/img/fathurnews.png",
     "link": "./apps/uts-frontend",

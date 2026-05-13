@@ -19,13 +19,15 @@
       <nav class="nav">
         <div class="nav-info">
           <a href="./">
-            Fathurrahman Muhammad.
+            <strong>
+              Fathurrahman Muhammad.
+            </strong>
           </a>
           <span>241110109 • Informatika 12D</span>
         </div>
         <a href="./apps/main/" class="nav-link" aria-label="Ke halaman portfolio">
-          <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="size-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="svg-icon">
             <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
           </svg>
         </a>
@@ -34,8 +36,68 @@
   </header>
 
   <main>
-    <section>
+    <section class="hero-section animate-fade-in" aria-label="Bagian hero dengan judul dan deskripsi singkat">
+      <div class="container">
+        <span>Teori & Praktikum</span>
+        <h1>
+          Pemrograman Web.
+        </h1>
+        <p>
+          Workspace dokumentasi perkuliahan Pemrograman Web: kumpulan latihan mandiri, tugas mingguan, dan
+          proyek asesmen.
+        </p>
+      </div>
+    </section>
 
+
+    <section class="projects-section">
+      <div class="container-wide">
+
+        <div class="project-controls">
+
+          <div class="search-box animate-fade-left">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="svg-icon search-icon">
+              <path fill-rule="evenodd"
+                d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+                clip-rule="evenodd" />
+            </svg>
+            <input type="search" id="search-input" placeholder="Cari proyek..."
+              aria-label="Cari proyek berdasarkan judul, kategori, atau tag...">
+          </div>
+
+          <div class="controls-right animate-fade-right">
+
+            <div class="select-wrapper">
+              <select id="sort-select" class="sort-select" aria-label="Pengurutan proyek berdasarkan kriteria tertentu">
+                <option value="newest">Newest</option>
+                <option value="oldest">Oldest</option>
+              </select>
+            </div>
+
+            <div class="layout-switcher" role="group" aria-label="Pengalih tampilan antara grid dan list">
+              <button type="button" class="switcher-btn active" id="btn-grid-view" aria-label="Tampilan Grid">
+                <svg xmlns="w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
+                </svg>
+                <span>Grid</span>
+              </button>
+              <button type="button" class="switcher-btn" id="btn-text-view" aria-label="Tampilan Tanpa Gambar">
+                <svg xmlns="w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                </svg>
+                <span>List</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="projects-grid view-grid" id="all-projects-container"></div>
+      </div>
     </section>
   </main>
 
