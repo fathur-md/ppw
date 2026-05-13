@@ -27,13 +27,6 @@ const ProjectService = {
           (a, b) => new Date(a.date) - new Date(b.date),
         );
 
-      case "progress":
-        return [...projects].sort((a, b) => {
-          const statusA = a.status.toLowerCase() === "on progress" ? 1 : 0;
-          const statusB = b.status.toLowerCase() === "on progress" ? 1 : 0;
-          return statusB - statusA;
-        });
-
       case "newest":
       default:
         return [...projects].sort(
@@ -56,7 +49,10 @@ const ProjectService = {
         const matchTags = project.tags.some((tag) =>
           tag.toLowerCase().includes(cleanQuery),
         );
-        return matchTitle || matchCategory || matchTags;
+        const matchType = (project.type || "")
+          .toLowerCase()
+          .includes(cleanQuery);
+        return matchTitle || matchCategory || matchTags || matchType;
       });
     }
 
@@ -89,7 +85,7 @@ const ProjectUI = {
             ${project.description || "Tidak ada deskripsi."}
           </p>
           <div class="card-tags-box">${tagsHTML}</div>
-          <a href="${project.link}" class="card-link-btn" target="_blank" rel="noopener noreferrer">
+          <a href="${project.link}" class="card-link-btn" target="_blank" rel="noopener noreferrer" aria-label="Buka proyek ${project.title}">
             Buka Proyek
           </a>
         </div>
@@ -150,6 +146,20 @@ async function initWorkspace() {
   );
 
   if (btnGridView && btnTextView && allProjectsContainer) {
+    const savedLayout = localStorage.getItem("projectLayout") || "view-grid";
+
+    if (savedLayout === "view-text") {
+      btnGridView.classList.remove("active");
+      btnTextView.classList.add("active");
+      allProjectsContainer.classList.remove("view-grid");
+      allProjectsContainer.classList.add("view-text");
+    } else {
+      btnTextView.classList.remove("active");
+      btnGridView.classList.add("active");
+      allProjectsContainer.classList.remove("view-text");
+      allProjectsContainer.classList.add("view-grid");
+    }
+
     const triggerLayoutSwitch = (layoutToRemove, layoutToAdd) => {
       allProjectsContainer.classList.remove(layoutToRemove);
       allProjectsContainer.classList.add(layoutToAdd);
@@ -160,6 +170,8 @@ async function initWorkspace() {
       btnTextView.classList.remove("active");
       btnGridView.classList.add("active");
       triggerLayoutSwitch("view-text", "view-grid");
+
+      localStorage.setItem("projectLayout", "view-grid");
     });
 
     btnTextView.addEventListener("click", () => {
@@ -167,6 +179,8 @@ async function initWorkspace() {
       btnGridView.classList.remove("active");
       btnTextView.classList.add("active");
       triggerLayoutSwitch("view-grid", "view-text");
+
+      localStorage.setItem("projectLayout", "view-text");
     });
   }
 

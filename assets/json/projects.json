@@ -2,85 +2,100 @@
   {
     "id": 1,
     "category": "Latihan",
-    "type": "Latihan 1 Praktikum",
+    "type": "Latihan Praktikum",
     "title": "Portfolio Sederhana",
-    "description": "Project pertama yang dideploy di github pages, menampilkan portfolio pribadi dengan informasi dasar dan tampilan menarik.",
+    "description": "Implementasi pertama portofolio sederhana menggunakan HTML dan CSS sebagai tugas praktikum, dipublikasikan melalui GitHub Pages dengan desain yang responsif.",
     "status": "Completed",
-    "date": "2026-03-01",
+    "date": "2026-04-09",
     "img": "./assets/img/latihan1.png",
     "link": "./apps/latihan-1",
-    "tags": ["HTML", "CSS", "TailwindCSS"]
+    "tags": ["Lab Work", "HTML", "CSS", "Tailwind CSS", "Introduction"]
   },
   {
     "id": 2,
-    "category": "Latihan",
-    "type": "Latihan 2 Praktikum",
-    "title": "Car Rental",
-    "description": "Antarmuka manajemen data pegawai dengan fokus pada hierarki informasi yang bersih.",
-    "status": "Completed",
-    "date": "2026-03-15",
-    "img": "./assets/img/latihan2.png",
-    "link": "./apps/latihan-2",
-    "tags": ["HTML", "CSS"]
-  },
-  {
-    "id": 3,
-    "category": "Asesmen",
-    "type": "ASN Frontend Praktikum",
-    "title": "HireMe Platform Freelance",
-    "description": "Platform pencarian bakat lepas untuk menghubungkan developer dengan klien potensial.",
-    "status": "Completed",
-    "date": "2026-04-02",
-    "img": "./assets/img/hireme.png",
-    "link": "./apps/asn-frontend",
-    "tags": ["UI/UX", "Eco"]
-  },
-  {
-    "id": 4,
     "category": "Project",
     "type": "Project Praktikum",
     "title": "My Portfolio",
-    "description": "Portfolio pribadi yang menampilkan berbagai proyek dan pengalaman dengan desain gelap yang elegan.",
+    "description": "Portfolio profesional yang menghadirkan koleksi proyek dan pengalaman pengembangan dengan antarmuka yang minimalis dan responsif.",
     "status": "Completed",
-    "date": "2026-04-20",
+    "date": "2026-04-19",
     "img": "./assets/img/gemini-svg.svg",
     "link": "./apps/main",
-    "tags": ["UI/UX"]
+    "tags": ["Lab Work", "Project", "HTML", "CSS"]
   },
+  {
+    "id": 3,
+    "category": "Latihan",
+    "type": "Latihan Praktikum",
+    "title": "Car Rental",
+    "description": "Aplikasi web front-end untuk manajemen rental mobil, dikembangkan berdasarkan studi kasus sebagai latihan praktikum di laboratorium.",
+    "status": "Completed",
+    "date": "2026-04-23",
+    "img": "./assets/img/latihan2.png",
+    "link": "./apps/latihan-2",
+    "tags": ["Lab Work", "HTML", "CSS"]
+  },
+
+  {
+    "id": 4,
+    "category": "Asesmen",
+    "type": "ASN Frontend Praktikum",
+    "title": "HireMe Platform Freelance",
+    "description": "Platform digital yang menghubungkan para profesional teknologi dengan klien potensial, dikembangkan sebagai proyek asesmen front-end praktikum.",
+    "status": "Completed",
+    "date": "2026-04-30",
+    "img": "./assets/img/hireme.png",
+    "link": "./apps/asn-frontend",
+    "tags": ["ASN", "Lab Work", "HTML", "CSS"]
+  },
+
   {
     "id": 5,
     "category": "Asesmen",
     "type": "ASN Teori",
     "title": "Portfolio Professional",
-    "description": "Dokumentasi portofolio berbasis CMS untuk pemenuhan kebutuhan tugas teori.",
+    "description": "Dokumentasi portofolio profesional berbasis sistem manajemen konten, dikembangkan sebagai proyek asesmen teori Pemrograman Web.",
     "status": "Completed",
-    "date": "2026-04-25",
+    "date": "2026-05-7",
     "img": "./assets/img/asn-wordpress.png",
     "link": "https://fathur.infinityfree.me/",
-    "tags": ["Design", "WordPress"]
+    "tags": [
+      "Theory",
+      "WordPress",
+      "Elementor",
+      "Hello Elementor Theme",
+      "Professional Portfolio"
+    ]
   },
   {
     "id": 6,
     "category": "Asesmen",
     "type": "UTS Teori",
     "title": "PetCare+",
-    "description": "Satu aplikasi cerdas untuk konsultasi medis, produk premium, dan reservasi layanan. Dirancang untuk kemudahan Anda dan kesejahteraan mereka.",
+    "description": "Aplikasi komprehensif untuk layanan kesehatan hewan peliharaan yang mengintegrasikan konsultasi medis, katalog produk premium, dan sistem reservasi, dikembangkan sebagai proyek ujian untuk teori Pemrograman Web.",
     "status": "Completed",
-    "date": "2026-05-01",
+    "date": "2026-05-9",
     "img": "./assets/img/petcare-wordpress.png",
     "link": "https://petcare.loveslife.biz",
-    "tags": ["Design", "Company Profile Website"]
+    "tags": [
+      "Theory",
+      "Company Profile Website",
+      "WordPress",
+      "Gutenberg Editor",
+      "Twenty Twenty-Five Theme",
+      "CSS Inject"
+    ]
   },
   {
     "id": 7,
     "category": "Asesmen",
     "type": "UTS Frontend Praktikum",
     "title": "FathurNEWS",
-    "description": "Aplikasi berita yang menyajikan informasi terkini dengan antarmuka yang bersih dan mudah digunakan.",
+    "description": "Aplikasi portal berita yang menyajikan konten informasi terkini dengan antarmuka yang intuitif dan responsif, dikembangkan menggunakan teknologi web modern. Sebagai proyek ujian praktikum.",
     "status": "Completed",
-    "date": "2026-05-13",
+    "date": "2026-05-11",
     "img": "./assets/img/fathurnews.png",
     "link": "./apps/uts-frontend",
-    "tags": ["Design", "Company Profile Website"]
+    "tags": ["Lab Work", "Company Profile Website", "HTML", "CSS", "JavaScript"]
   }
 ]
