@@ -39,6 +39,12 @@
   --shadow-m: 0 10px 30px rgba(0, 0, 0, 0.1);
   --shadow-l: 0 24px 60px rgba(0, 0, 0, 0.16);
 
+  --bg-gradient-soft: linear-gradient(
+    to right,
+    var(--border-default),
+    rgba(240, 240, 244, 0.47) 50%,
+    transparent 100%
+  );
   --scrim-gradient: linear-gradient(
     to top,
     rgba(255, 255, 255, 0.92) 0%,
@@ -93,6 +99,12 @@
     --shadow-m: 0 10px 30px rgba(0, 0, 0, 0.2);
     --shadow-l: 0 24px 60px rgba(0, 0, 0, 0.35);
 
+    --bg-gradient-soft: linear-gradient(
+      to right,
+      var(--border-default),
+      rgba(44, 44, 46, 0.47) 50%,
+      transparent 100%
+    );
     --scrim-gradient: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.92) 0%,
@@ -371,7 +383,7 @@ header {
   backdrop-filter: var(--glass-blur-m);
   -webkit-backdrop-filter: var(--glass-blur-m);
   border: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
+
   z-index: 2;
 }
 
@@ -386,13 +398,13 @@ header {
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   color: var(--accent);
   margin-bottom: var(--space-xs);
 }
 
 .card-text {
-  font-size: 15px;
+  font-size: 16px;
   color: var(--text-paragraph);
   line-height: 1.6;
   margin-bottom: var(--space-m);
@@ -419,10 +431,10 @@ header {
   align-self: flex-start;
   display: inline-flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 8px 16px;
   background: var(--accent);
   color: var(--text-on-accent);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
   border-radius: var(--radius-s);
   box-shadow: 0 4px 12px rgba(59, 105, 213, 0.2);
@@ -453,14 +465,9 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-m);
+  padding-bottom: var(--space-s);
   margin-bottom: var(--space-l);
-  background: linear-gradient(
-    to right,
-    var(--border-default),
-    #f0f0f477 50%,
-    transparent 100%
-  );
-  border-radius: var(--radius-m);
+  border-bottom: 3px solid var(--border-default);
 }
 
 .search-box {
@@ -653,15 +660,14 @@ header {
 }
 
 .projects-grid .project-card .card-title {
-  font-size: 1.25rem;
+  font-size: 17px;
   font-weight: 700;
   color: var(--text-main);
   margin-bottom: var(--space-2xs);
 }
 
 .projects-grid .project-card .card-text {
-  font-size: 14px;
-  margin-bottom: var(--space-m);
+  margin-bottom: var(--space-s);
 }
 
 .projects-grid .project-card .card-tags-box {
@@ -673,7 +679,8 @@ header {
 }
 
 .projects-grid.view-grid .project-card {
-  padding: 0;
+  padding: 0 !important;
+  max-height: 350px;
 }
 
 .projects-grid.view-grid .card-img-box {
@@ -693,6 +700,8 @@ header {
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-smooth);
+  max-height: 200px;
+  overflow: hidden;
 }
 
 .projects-grid.view-grid .project-card .card-title {
@@ -713,7 +722,7 @@ header {
 
 .projects-grid.view-text .project-card {
   padding: var(--space-s) var(--space-m);
-  border-left: 4px solid var(--accent);
+  /* border-left: 4px solid var(--accent); */
   border-radius: var(--radius-s);
 }
 
@@ -849,7 +858,8 @@ footer {
     flex-direction: column;
     align-items: stretch;
     gap: var(--space-s);
-    background: transparent;
+    border-bottom: none;
+    padding-bottom: none;
   }
   .search-box {
     max-width: 100%;
