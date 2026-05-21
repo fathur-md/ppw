@@ -97,5 +97,17 @@
     "img": "./assets/img/fathurnews.png",
     "link": "./apps/uts-frontend",
     "tags": ["Lab Work", "Company Profile Website", "HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": 8,
+    "category": "Latihan",
+    "type": "Latihan Praktikum",
+    "title": "Latihan JavaScript",
+    "description": "",
+    "status": "On Progress",
+    "date": "2026-05-21",
+    "img": "https://i.pinimg.com/736x/7a/fb/04/7afb0491c91b2f9e9aac56667c3be677.jpg",
+    "link": "./apps/latihanjs",
+    "tags": ["Lab Work", "HTML", "CSS", "JavaScript"]
   }
 ]
