@@ -1,20 +1,45 @@
-import Student from "./models/Student.js";
 import BankAccount from "./models/BankAccount.js";
+import Student from "./models/Student.js";
 
 const mhs1 = new Student("Budi", 21, "221110001", "Informatika");
-mhs1.greet();
-mhs1.study();
 
-const rekeningMhs = new BankAccount(mhs1.name);
-rekeningMhs.deposit(200000);
-rekeningMhs.withdraw(50000);
+const accountMhs = new BankAccount(mhs1.name);
+accountMhs.deposit(2000000);
+accountMhs.withdraw(500000);
 
-document.getElementById("output").innerHTML = `
-  <h2>Data Mahasiswa</h2>
-  <p><strong>Nama:</strong> ${mhs1.name}</p>
-  <p><strong>Umur:</strong> ${mhs1.age}</p>
-  <p><strong>NIM:</strong> ${mhs1.nim}</p>
-  <p><strong>Jurusan:</strong> ${mhs1.major}</p>
-  <p><strong>Saldo Akhir:</strong> Rp${rekeningMhs.getBalance().toLocaleString('id-ID')}</p>
-`;
+function App() {
+  return /*html*/ `
+    <div class="app-container">
+      <h2>Data Mahasiswa</h2>
+      <div class="app-card">
+        <div class="app-row">
+          <span class="label">Nama</span>
+          <span class="value">${mhs1.name}</span>
+        </div>
+        <div class="app-row">
+          <span class="label">Umur</span>
+          <span class="value">${mhs1.age}</span>
+        </div>
+        <div class="app-row">
+          <span class="label">NIM</span>
+          <span class="value">${mhs1.nim}</span>
+        </div>
+        <div class="app-row">
+          <span class="label">Jurusan</span>
+          <span class="value">${mhs1.major}</span>
+        </div>
+        <div class="app-row">
+          <span class="label">Saldo</span>
+          <span class="value">Rp. ${accountMhs.getBalance().toLocaleString("id-ID")}</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
 
+function render() {
+  const root = document.getElementById("app");
+  root.innerHTML = App();
+}
+
+render();

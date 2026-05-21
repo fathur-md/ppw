@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 :root {
   --font-default: "Inter", system-ui, -apple-system, sans-serif;
@@ -76,7 +76,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-base: #030303;
+    --bg-base: #0a0a0a;
     --bg-surface: #1c1c1e99;
     --bg-surface-elevated: #1c1c1e;
 
@@ -245,7 +245,6 @@ h6 {
 
 p {
   color: var(--text-paragraph);
-  letter-spacing: -0.022em;
 }
 
 .container {
@@ -260,7 +259,7 @@ p {
   padding: 0 var(--space-sm);
 }
 
-header {
+.site-header {
   position: sticky;
   top: 0;
   height: var(--header-height);
@@ -846,7 +845,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  header {
+  .site-header {
     height: auto;
   }
   .nav-container {
@@ -873,6 +872,7 @@ footer {
     gap: var(--space-s);
     border-bottom: none;
     padding-bottom: none;
+    margin-bottom: 0;
   }
   .search-box {
     max-width: 100%;

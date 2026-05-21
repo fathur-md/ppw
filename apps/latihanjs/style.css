@@ -1,0 +1,138 @@
+@import url("../../assets/css/style.css");
+
+#app {
+  flex-grow: 1;
+  padding-top: 3rem;
+}
+
+.app-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.75rem 1.25rem;
+}
+
+.app-navbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.app-active {
+  font-weight: 600;
+  color: var(--accent);
+  position: relative;
+}
+
+.app-active::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: 2px;
+  background: var(--accent);
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+
+.app-container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  background: var(--bg-surface);
+  border-radius: 1rem;
+  border: 2px solid var(--border-default);
+}
+
+.app-container h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.app-card {
+  border: 1px solid var(--border-default);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.025);
+}
+
+.app-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.app-row:last-child {
+  border-bottom: none;
+}
+
+.label,
+.value {
+  font-size: 15px;
+}
+
+.label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.value {
+  font-weight: 600;
+  color: var(--text-paragraph);
+}
+
+.convert-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.convert-content button {
+  padding: 0.75rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 0.75rem;
+}
+
+.convert-content select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.output {
+  font-weight: 500;
+  font-size: 15px;
+  padding: 0 1.25rem;
+  background: #c2d9ff5c;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.output-result span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+  padding-bottom: 10px;
+}
+
+.output-show {
+  max-height: unset;
+  opacity: 1;
+  padding: 1.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .output {
+    background: #c2d9ff1a;
+  }
+}

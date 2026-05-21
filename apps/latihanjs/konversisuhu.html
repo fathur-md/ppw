@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <title>Konversi Suhu</title>
- </head>
- <body>
-   <h2>Konversi Suhu</h2>
 
-   <label for="suhu">Masukkan Suhu:</label>
-   <input type="number" id="suhu" placeholder="Contoh: 25" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no" />
+  <title>Konversi Suhu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-   <label for="jenis">Jenis Konversi:</label>
-   <select id="jenis">
-     <option value="CtoF">Celsius ke Fahrenheit</option>
-     <option value="FtoC">Fahrenheit ke Celsius</option>
-   </select>
+<body>
+  <header class="app-header">
+    <nav class="app-navbar">
+      <a href="index.html">
+        Data Mahasiswa
+      </a>
+      <a href="konversisuhu.html" class="app-active">
+        Konversi Suhu
+      </a>
+    </nav>
+  </header>
 
-   <button onclick="konversiSuhu()">Konversi</button>
+  <div class="app-container" style="margin-top: 3rem; width: 100%;">
+    <div class="convert-content">
+      <h2>Konversi Suhu</h2>
 
-   <div id="output"></div>
+      <label for="suhu">Masukkan Suhu:</label>
+      <input type="number" id="suhu" placeholder="Contoh: 25" />
+
+      <label for="jenis">Jenis Konversi:</label>
+      <div class="select-wrapper">
+        <select id="jenis">
+          <option value="CtoF">Celsius ke Fahrenheit</option>
+          <option value="FtoC">Fahrenheit ke Celsius</option>
+        </select>
+      </div>
+
+      <button id="btn-konversi">Konversi</button>
 
 
-   <script>
-     function konversiSuhu() {
-       const suhu = parseFloat(document.getElementById("suhu").value);
+      <div id="output" class="output"></div>
 
-       const jenis = document.getElementById("jenis").value;
+    </div>
+  </div>
 
-       const output = document.getElementById("output");
 
-       let hasil = "";
+  <script>
+    const output = document.getElementById("output");
+    const btn = document.getElementById("btn-konversi");
 
-       if (isNaN(suhu)) {
-         hasil = "Masukkan angka suhu yang valid";
-       } else {
+    btn.addEventListener("click", konversiSuhu);
 
-         if (jenis === "CtoF") {
-           hasil = suhu + "°C = " + ((suhu * 9) / 5 + 32).toFixed(2) + "°F";
-         } else {
-           hasil = suhu + "°F = " + (((suhu - 32) * 5) / 9).toFixed(2) + "°C";
-         }
-       }
+    function konversiSuhu() {
+      const suhuInput = parseFloat(document.getElementById("suhu").value);
+      const jenisKonversi = document.getElementById("jenis").value;
 
-       output.textContent = hasil;
-     }
-   </script>
- </body>
+      let hasil = "";
+
+      if (isNaN(suhuInput)) {
+        hasil = "Masukkan angka suhu yang valid.";
+      } else if (jenisKonversi === "CtoF") {
+        hasil = `${suhuInput}˚C = ${((suhuInput * 9 / 5) + 32).toFixed(2)}˚F`;
+      } else {
+        hasil = `${suhuInput}˚F = ${((suhuInput - 32) * 5 / 9).toFixed(2)}˚C`;
+      }
+
+      output.innerHTML = `
+        <div class="output-result">
+          <span>* Hasil</span>
+          <p>${hasil}</p>  
+        </div>
+      `;
+
+      output.classList.add("output-show");
+    }
+
+  </script>
+</body>
+
 </html>

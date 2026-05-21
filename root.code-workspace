@@ -3,12 +3,8 @@
     {
       "path": ".",
     },
-    {
-      // "path": "apps/latihanjs",
-    },
   ],
   "settings": {
-    "liveServer.settings.port": 10109,
     "editor.formatOnSave": true,
     "files.autoSave": "afterDelay",
     "editor.tabSize": 2,
