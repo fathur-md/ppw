@@ -67,7 +67,7 @@
   --radius-full: 9999px;
 
   --transition-fast: 0.3s ease;
-  --transition-smooth: 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 
   --header-height: 48px;
   --container-default: 1024px;
@@ -268,20 +268,8 @@ p {
   -webkit-backdrop-filter: var(--glass-blur-l);
   border-bottom: 1px solid var(--border-default);
   z-index: 100;
-
-  opacity: 0;
-  transform: translateY(-8px);
-  animation: fadeInHeader 0.5s var(--transition-smooth) forwards;
-  will-change: transform, opacity;
+  animation-delay: 0.3s !important;
 }
-
-@keyframes fadeInHeader {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .nav-container {
   display: flex;
   align-items: center;
@@ -757,20 +745,8 @@ p {
 
 .animate-fade-in {
   opacity: 0;
-  animation: fadeIn 0.7s var(--transition-smooth) forwards;
+  animation: fadeIn var(--transition-smooth) forwards;
   will-change: transform, opacity;
-}
-
-.hero-section.animate-fade-in {
-  animation-delay: 0.1s;
-}
-.projects-grid .project-card.animate-fade-in {
-  animation-duration: 1s;
-}
-
-.search-box.animate-fade-left,
-.layout-switcher.animate-fade-right {
-  animation-delay: 0.6s;
 }
 
 .animate-search-fade {
@@ -781,14 +757,31 @@ p {
 
 .animate-fade-left {
   opacity: 0;
-  animation: fadeLeft 0.4s var(--transition-smooth) forwards;
+  animation: fadeLeft var(--transition-smooth) forwards;
   will-change: transform, opacity;
 }
 
 .animate-fade-right {
   opacity: 0;
-  animation: fadeRight 0.4s var(--transition-smooth) forwards;
+  animation: fadeRight var(--transition-smooth) forwards;
   will-change: transform, opacity;
+}
+
+.animate-fade-top {
+  opacity: 0;
+  animation: fadeInTop var(--transition-smooth) forwards;
+  will-change: transform, opacity;
+}
+
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes searchFadeIn {
