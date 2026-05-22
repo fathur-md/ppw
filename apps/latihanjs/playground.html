@@ -10,20 +10,26 @@
 
 <body>
     <header id="header" class="app-header"></header>
-    <div class="animate-fade-in">
-        <h1>Playground</h1>
-    </div>
+    <main class="grow pg-main">
+        <section class="container-wide animate-fade-in">
+            <h1>Playground</h1>
+
+            <h2>Mini Shop</h2>
+            <div class="pg-content">
+                <div id="products"></div>
+
+                <div id="cart">
+                    <h3>Cart</h3>
+                    <div id="cart-items"></div>
+                    <h4 class="total">
+                        Total: <span id="cart-total">0</span>
+                    </h4>
+                </div>
+            </div>
+
+        </section>
+    </main>
     <script type="module" src="main.js"></script>
-    <script>
-        window.addEventListener("DOMContentLoaded", () => {
-            console.log('domready');
-
-        })
-
-        window.addEventListener("load", () => {
-            console.log('window loaded');
-        })
-    </script>
 </body>
 
 </html>

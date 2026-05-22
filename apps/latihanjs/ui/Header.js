@@ -1,4 +1,4 @@
-export function Header() {
+function Header() {
   const currentPage = window.location.pathname;
   const navItems = [
     {
@@ -39,4 +39,9 @@ export function Header() {
           .join("")}
     </nav>
     `;
+}
+
+export function renderHeader() {
+  const header = document.getElementById("header");
+  header.innerHTML = Header();
 }

@@ -1,4 +1,4 @@
-@import url("../../assets/css/style.css");
+@import "../../assets/css/style.css";
 
 #app {
   flex-grow: 1;
@@ -13,28 +13,32 @@
 
 .app-navbar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
-  font-size: 14px;
-  font-weight: 500;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 400;
   color: var(--text-muted);
 }
 
-.app-active {
-  font-weight: 600;
-  color: var(--text-paragraph);
+.app-navbar a {
   position: relative;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
 }
 
-.app-active::after {
-  content: "";
-  display: block;
-  width: 30%;
-  height: 2px;
-  background: var(--accent);
-  position: absolute;
-  bottom: -1px;
-  left: 0;
+.app-navbar a:hover {
+  background: var(--glass-bg);
+  box-shadow: var(--glass-shadow);
+  /* font-weight: 600; */
+  color: var(--text-paragraph);
+}
+.app-active {
+  background: var(--glass-bg);
+  box-shadow: var(--glass-shadow);
+  font-weight: 600;
+  color: var(--text-paragraph);
 }
 
 .app-container {
@@ -135,4 +139,143 @@
   .output {
     background: #c2d9ff1a;
   }
+}
+
+.pg-main {
+  padding-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 3rem;
+}
+
+.pg-content {
+  margin-top: 1rem;
+  background: var(--bg-surface);
+  padding: 1.25rem;
+  border-radius: 1rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.pg-content > div {
+  flex: 1 1 300px;
+}
+
+#products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid var(--border-default);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: var(--text-paragraph);
+}
+
+.product-info h5 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.product-info p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.product button {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius-full);
+}
+
+#cart {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 1rem;
+  position: relative;
+  overflow-y: auto;
+}
+
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border: 1px solid var(--border-default);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  font-size: 14px;
+  color: var(--text-paragraph);
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: var(--text-paragraph);
+}
+.cart-item-info h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.cart-item-info p {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.cart-item-qty button {
+  background: var(--glass-bg);
+  box-shadow: var(--glass-shadow);
+  border: 1px solid var(--border-default);
+  color: var(--text-paragraph);
+  padding: 0rem 0.5rem;
+  border-radius: 6px;
+}
+
+.total {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-default);
+  font-size: 14px;
+  font-weight: 500;
 }
