@@ -16,13 +16,13 @@
   align-items: center;
   gap: 1rem;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--text-muted);
 }
 
 .app-active {
   font-weight: 600;
-  color: var(--accent);
+  color: var(--text-paragraph);
   position: relative;
 }
 
@@ -136,3 +136,4 @@
     background: #c2d9ff1a;
   }
 }
+
