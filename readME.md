@@ -19,6 +19,7 @@ Repositori ini digunakan untuk materi mata kuliah Pemrograman Web.
 - [Latihan 1](https://fathur-md.github.io/ppw/apps/latihan-1/index.html)
 - [Latihan 2](https://fathur-md.github.io/ppw/apps/latihan-2/index.html)
 - [Portfolio](https://fathur-md.github.io/ppw/apps/main/index.html)
+- [LatihanJS](https://fathur-md.github.io/ppw/apps/latihanjs/index.html)
 
 ### Main
 
