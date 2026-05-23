@@ -122,6 +122,11 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: #3b69d51e !important;
+  color: #f59e0b !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -610,7 +615,12 @@ p {
 
 .projects-grid {
   display: grid;
+  min-height: 50vh;
   gap: var(--space-m);
+}
+
+.empty-state {
+  gap: 6px;
 }
 
 .projects-grid .empty-state {
@@ -626,7 +636,7 @@ p {
   font-weight: 500;
   letter-spacing: -0.01em;
   opacity: 0;
-  animation: fadeIn 0.4s var(--transition-smooth) forwards;
+  animation: fadeIn var(--transition-smooth) forwards;
 }
 
 .projects-grid .project-card {
@@ -710,21 +720,20 @@ p {
   margin-top: 0;
 }
 
-.projects-grid.view-text {
+.projects-grid.view-list {
   grid-template-columns: 1fr;
 }
 
-.projects-grid.view-text .project-card {
-  padding: var(--space-s) var(--space-m);
-  /* border-left: 4px solid var(--accent); */
+.projects-grid.view-list .project-card {
+  padding: var(--space-s);
   border-radius: var(--radius-s);
 }
 
-.projects-grid.view-text .project-card .card-title {
+.projects-grid.view-list .project-card .card-title {
   margin-top: var(--space-xs);
 }
 
-.projects-grid.view-text .project-card .card-text {
+.projects-grid.view-list .project-card .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -733,11 +742,11 @@ p {
   margin-top: var(--space-xs);
 }
 
-.projects-grid.view-text .project-card .card-body {
+.projects-grid.view-list .project-card .card-body {
   margin-top: 0;
 }
 
-.projects-grid.view-text .card-img-box {
+.projects-grid.view-list .card-img-box {
   display: none;
 }
 
@@ -745,6 +754,7 @@ p {
 
 .animate-fade-in {
   opacity: 0;
+  transform: translateY(20px);
   animation: fadeIn var(--transition-smooth) forwards;
   will-change: transform, opacity;
 }
@@ -837,6 +847,15 @@ footer {
   font-weight: 400;
 }
 
+@keyframes FadeInOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .site-header {
     height: auto;
@@ -893,4 +912,8 @@ footer {
   .layout-switcher:hover {
     border-color: var(--accent);
   }
+}
+
+.min-h-45vh {
+  min-height: 45vh;
 }

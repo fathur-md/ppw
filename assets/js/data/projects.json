@@ -6,7 +6,7 @@
     "title": "Portfolio Sederhana",
     "description": "Implementasi pertama portofolio sederhana menggunakan HTML dan CSS sebagai tugas praktikum, dipublikasikan melalui GitHub Pages dengan desain yang responsif.",
     "status": "Completed",
-    "date": "2026-04-09",
+    "createdAt": "2026-04-09",
     "img": "./assets/img/latihan1.png",
     "link": "./apps/latihan-1",
     "tags": ["Lab Work", "HTML", "CSS", "Tailwind CSS", "Introduction"]
@@ -18,7 +18,7 @@
     "title": "My Portfolio",
     "description": "Portfolio profesional yang menghadirkan koleksi proyek dan pengalaman pengembangan dengan antarmuka yang minimalis dan responsif.",
     "status": "Completed",
-    "date": "2026-04-19",
+    "createdAt": "2026-04-19",
     "img": "./assets/img/gemini-svg.svg",
     "link": "./apps/main",
     "tags": ["Lab Work", "Project", "HTML", "CSS"]
@@ -30,7 +30,7 @@
     "title": "Car Rental",
     "description": "Aplikasi web front-end untuk manajemen rental mobil, dikembangkan berdasarkan studi kasus sebagai latihan praktikum di laboratorium.",
     "status": "Completed",
-    "date": "2026-04-23",
+    "createdAt": "2026-04-23",
     "img": "./assets/img/latihan2.png",
     "link": "./apps/latihan-2",
     "tags": ["Lab Work", "HTML", "CSS"]
@@ -43,7 +43,7 @@
     "title": "HireMe Platform Freelance",
     "description": "Platform digital yang menghubungkan para profesional teknologi dengan klien potensial, dikembangkan sebagai proyek asesmen front-end praktikum.",
     "status": "Completed",
-    "date": "2026-04-30",
+    "createdAt": "2026-04-30",
     "img": "./assets/img/hireme.png",
     "link": "./apps/asn-frontend",
     "tags": ["ASN", "Lab Work", "HTML", "CSS"]
@@ -56,7 +56,7 @@
     "title": "Portfolio Professional",
     "description": "Dokumentasi portofolio profesional berbasis sistem manajemen konten, dikembangkan sebagai proyek asesmen teori Pemrograman Web.",
     "status": "Completed",
-    "date": "2026-05-7",
+    "createdAt": "2026-05-7",
     "img": "./assets/img/asn-wordpress.png",
     "link": "https://fathur.infinityfree.me/",
     "tags": [
@@ -74,7 +74,7 @@
     "title": "PetCare+",
     "description": "Aplikasi komprehensif untuk layanan kesehatan hewan peliharaan yang mengintegrasikan konsultasi medis, katalog produk premium, dan sistem reservasi, dikembangkan sebagai proyek ujian untuk teori Pemrograman Web.",
     "status": "Completed",
-    "date": "2026-05-9",
+    "createdAt": "2026-05-9",
     "img": "./assets/img/petcare-wordpress.png",
     "link": "https://petcare.loveslife.biz",
     "tags": [
@@ -93,7 +93,7 @@
     "title": "FathurNEWS",
     "description": "Aplikasi portal berita yang menyajikan konten informasi terkini dengan antarmuka yang intuitif dan responsif, dikembangkan menggunakan teknologi web modern. Sebagai proyek ujian praktikum.",
     "status": "Completed",
-    "date": "2026-05-11",
+    "createdAt": "2026-05-11",
     "img": "./assets/img/fathurnews.png",
     "link": "./apps/uts-frontend",
     "tags": ["Lab Work", "Company Profile Website", "HTML", "CSS", "JavaScript"]
@@ -105,7 +105,7 @@
     "title": "JavaScript",
     "description": "",
     "status": "Completed",
-    "date": "2026-05-21",
+    "createdAt": "2026-05-21",
     "img": "https://i.pinimg.com/736x/7a/fb/04/7afb0491c91b2f9e9aac56667c3be677.jpg",
     "link": "./apps/latihanjs",
     "tags": ["Lab Work", "HTML", "CSS", "JavaScript"]

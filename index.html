@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
   <link rel="icon" href="./icon.png" type="image/png" sizes="32x32">
 
@@ -75,7 +75,7 @@
             </div>
 
             <div class="layout-switcher" role="group" aria-label="Pengalih tampilan antara grid dan list">
-              <button type="button" class="switcher-btn active" id="btn-grid-view" aria-label="Tampilan Grid">
+              <button type="button" class="switcher-btn active" data-layout="grid" aria-label="Tampilan Grid">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
                   stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round"
@@ -83,7 +83,7 @@
                 </svg>
                 <span>Grid</span>
               </button>
-              <button type="button" class="switcher-btn" id="btn-text-view" aria-label="Tampilan Tanpa Gambar">
+              <button type="button" class="switcher-btn" data-layout="list" aria-label="Tampilan Tanpa Gambar">
                 <svg xmlns="w3.org" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round"
                     d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
@@ -101,13 +101,13 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="">
     <div class="container">
       <small>&copy; 2026 Fathurrahman Muhammad. Informatika 12D.</small>
     </div>
   </footer>
 
-  <script src="./assets/js/main.js" defer></script>
+  <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>
