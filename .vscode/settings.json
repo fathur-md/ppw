@@ -1,3 +1,9 @@
 {
-  "liveServer.settings.port": 5501
+  // "liveServer.settings.root": "/latihanjs/",
+  "liveServer.settings.host": "localhost",
+
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "editor.detectIndentation": false
 }

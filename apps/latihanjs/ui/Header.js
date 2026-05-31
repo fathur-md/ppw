@@ -10,8 +10,12 @@ function Header() {
       href: "konversisuhu.html",
     },
     {
-      name: "Playground",
-      href: "playground.html",
+      name: "Class",
+      href: "class.html",
+    },
+    {
+      name: "Functional",
+      href: "functional",
     },
   ];
   return /*html*/ `

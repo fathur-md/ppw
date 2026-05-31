@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Ecommerce</title>
+</head>
+<style type="text/tailwindcss">
+  @layer base {
+        button {
+            cursor: pointer;
+            transition: all 250ms ease;
+        }
+        button:active {
+            transform: scale(0.95);
+        }
+    }
+</style>
+
+<body class="bg-gray-200 text-gray-800 flex flex-col min-h-dvh">
+  <header class="bg-[#DA5435]">
+    <div class="max-w-6xl mx-auto" data-div="header"></div>
+  </header>
+  <main class="grow">
+    <section class="max-w-6xl mx-auto p-5">
+
+      <div class="grid gap-5">
+        <h2 class="font-medium text-lg">Katalog Produk</h2>
+        <div data-app="katalog"
+          class="grid gap-5 grid-cols-[repeat(auto-fit,minmax(min(250px,100%),1fr))] pb-10 border-b-4 border-gray-300">
+        </div>
+        <h2 class="font-medium text-lg">Keranjang Belanja</h2>
+        <div data-app="keranjang"></div>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <div class="max-w-6xl px-5 py-2 mx-auto">
+      <p class="text-sm text-gray-500">
+        @Ecommerce 2026. All right reserved.
+      </p>
+    </div>
+  </footer>
+
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+
+</html>
