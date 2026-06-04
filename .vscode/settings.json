@@ -1,9 +1,5 @@
 {
   // "liveServer.settings.root": "/latihanjs/",
   "liveServer.settings.host": "localhost",
-
-  "[html]": {
-    "editor.tabSize": 2
-  },
   "editor.detectIndentation": false
 }
