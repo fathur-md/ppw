@@ -7,7 +7,7 @@ export class ProjectController {
     }
     this.service = service;
     this.view = view;
-    this.currentView = "grid";
+    this.currentView = localStorage.getItem("layout") ?? "grid";
     this.currentSort = "newest";
     this.currentSearch = "";
     this.searchTimeout = null;
@@ -22,6 +22,7 @@ export class ProjectController {
       this.setupSort();
       this.setupSearch();
       this.setupLayout();
+      this.updateActiveLayout(this.view.layoutBtns, this.currentView);
     } catch (error) {
       console.error("Init gagal:", error.message);
 
@@ -82,6 +83,7 @@ export class ProjectController {
         if (this.currentView === mode) return;
 
         this.currentView = mode;
+        localStorage.setItem("layout", mode);
 
         this.updateActiveLayout(layoutBtns, mode);
 
