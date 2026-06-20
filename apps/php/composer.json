@@ -2,6 +2,7 @@
   "require": {
     "moneyphp/money": "^4.9",
     "tecnickcom/tcpdf": "^6.6",
-    "phpoffice/phpspreadsheet": "^5.8"
+    "phpoffice/phpspreadsheet": "^5.8",
+    "endroid/qr-code": "^6.1"
   }
 }

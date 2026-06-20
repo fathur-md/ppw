@@ -14,3 +14,5 @@
 - Sertakan screenshot hasil program
 
 4. Silakan kumpulkan melalui e-learning.
+
+batas 22 juni

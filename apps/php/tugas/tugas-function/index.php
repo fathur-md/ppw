@@ -1,12 +1,57 @@
 <?php
-require_once 'function.php';
+require_once __DIR__ . '/function.php';
 
 $daftarMenu = [
-
+  "menu1" => [
+    "nama" => "Chicken",
+    "harga" => 20000
+  ],
+  "menu2" => [
+    "nama" => "Super Besar 1",
+    "harga" => 30000
+  ],
+  "menu3" => [
+    "nama" => "Super Besar 2",
+    "harga" => 52000
+  ],
+  "menu4" => [
+    "nama" => "KFC Kombo Winger",
+    "harga" => 28000
+  ],
+  "menu5" => [
+    "nama" => "2 Pcs Crispy Strips",
+    "harga" => 14000
+  ],
 ];
 
 $data = null;
-$hasil = null;
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  $nama = $_POST['nama'];
+  $menuKey = $_POST['menu'];
+  $jumlah = (int) $_POST['jumlah'];
+  $isMember = isset($_POST['member']);
+
+  $namaMenu = $daftarMenu[$menuKey]['nama'];
+  $harga = $daftarMenu[$menuKey]['harga'];
+  $subtotal = hitungSubtotal($harga, $jumlah);
+  $diskon = hitungDiskon($subtotal, $isMember);
+  $ppn = hitungPPN($subtotal - $diskon);
+  $total = hitungTotal($subtotal, $diskon, $ppn);
+
+  $data = [
+    'nama'      => $nama,
+    'is_member' => $isMember,
+    'pesanan'   => $namaMenu,
+    'harga'     => $harga,
+    'jumlah'    => $jumlah,
+    'subtotal'  => $subtotal,
+    'diskon'    => $diskon,
+    'ppn'       => $ppn,
+    'total'     => $total
+  ];
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,10 +68,7 @@ $hasil = null;
 <body class="bg-gray-100 flex flex-col min-h-dvh antialiased text-gray-800">
   <header class="border-b border-gray-300/50 bg-white">
     <div class="flex items-center justify-between max-w-5xl mx-auto px-5 py-2">
-      <div>
-        <strong>Aplikasi Kasir KFC.</strong>
-      </div>
-      <p class="text-sm font-medium">Tugas Function PHP</p>
+      <strong>Aplikasi Kasir KFC.</strong>
     </div>
   </header>
 
@@ -47,12 +89,14 @@ $hasil = null;
 
             <div class="flex flex-col gap-2">
               <label for="menu" class="font-semibold">Pilih Menu:</label>
-              <select class="border rounded-md px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-red-400 appearance-none"
+              <select class="border rounded-md px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-red-400 appearance-none cursor-pointer invalid:text-gray-400 text-sm"
                 name="menu" id="menu" required>
-                <option value="" disabled selected>Pilih Menu</option>
-                <option value="menu1">Menu 1</option>
-                <option value="menu2">Menu 2</option>
-                <option value="menu3">Menu 3</option>
+                <option value="" disabled selected>- Pilih Menu -</option>
+                <?php foreach ($daftarMenu as $key => $item): ?>
+                  <option value="<?= $key ?>">
+                    <?= $item['nama'] ?> - Rp <?= number_format($item['harga'], 0, ',', '.') ?>
+                  </option>
+                <?php endforeach; ?>
               </select>
             </div>
 
@@ -78,20 +122,19 @@ $hasil = null;
           <?php if (is_null($data)): ?>
             <div class="grow flex items-center justify-center flex-col text-gray-400">
               <p>Belum ada pesanan.</p>
-              <P>Silahkan mengisi form.</P>
             </div>
           <?php else: ?>
             <div class="grow mt-3 font-mono text-sm space-y-3">
               <div class="flex justify-between">
                 <span>Nama Pelanggan:</span>
                 <span class="font-bold">
-                  <!-- nama pelanggan -->
+                  <?= $data['nama'] ?>
                 </span>
               </div>
               <div class="flex justify-between">
                 <span>Status Member:</span>
                 <span class="font-bold <?= $data['is_member'] ? 'text-green-600' : '' ?>">
-                  <!-- Status member -->
+                  <?= $data['is_member'] ? 'Member (Diskon Aktif)' : 'Bukan Member' ?>
                 </span>
               </div>
 
@@ -100,28 +143,28 @@ $hasil = null;
               <div class="flex justify-between">
                 <span>Pesanan:</span>
                 <span class="font-bold">
-                  <!-- Pesanan -->
+                  <?= $data['pesanan'] ?>
                 </span>
               </div>
 
               <div class="flex justify-between">
                 <span>Harga Satuan:</span>
                 <span>
-                  <!-- Harga satuan -->
+                  Rp <?= number_format($data['harga'], 0, ',', '.') ?>
                 </span>
               </div>
 
               <div class="flex justify-between">
                 <span>Jumlah:</span>
                 <span>
-                  <!-- Jumlah -->
+                  x<?= $data['jumlah'] ?>
                 </span>
               </div>
 
               <div class="flex justify-between font-bold">
                 <span>Subtotal:</span>
                 <span>
-                  <!-- Subtotal -->
+                  Rp <?= number_format($data['subtotal'], 0, ',', '.') ?>
                 </span>
               </div>
 
@@ -130,14 +173,14 @@ $hasil = null;
               <div class="flex justify-between text-green-600">
                 <span>Diskon Member(10%):</span>
                 <span>
-                  - Rp <!-- Diskon -->
+                  - Rp <?= number_format($data['diskon'], 0, ',', '.') ?>
                 </span>
               </div>
 
               <div class="flex justify-between text-red-600">
                 <span>PPN (11%):</span>
                 <span>
-                  + Rp <!-- Diskon -->
+                  + Rp <?= number_format($data['ppn'], 0, ',', '.') ?>
                 </span>
               </div>
 
@@ -146,7 +189,7 @@ $hasil = null;
               <div class="flex justify-between text-lg font-bold text-red-600 pt-3">
                 <span>TOTAL:</span>
                 <span>
-                  <!-- Total -->
+                  Rp <?= number_format($data['total'], 0, ',', '.') ?>
                 </span>
               </div>
 

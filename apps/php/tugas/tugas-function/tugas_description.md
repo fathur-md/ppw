@@ -23,3 +23,5 @@ Ketentuan:
    - Screenshot hasil aplikasi
 
 Catatan: Pastikan setiap fungsi jelas tugasnya dan gunakan nama fungsi yang deskriptif.
+
+batas 22 juni
