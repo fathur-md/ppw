@@ -27,7 +27,7 @@ Repositori ini digunakan untuk materi mata kuliah Pemrograman Web.
 - [Materi & Latihan](/apps/php/materi/)
 - [Tugas login logic](/apps/php/tugas/login-logic/index.php)
 - [Tugas P10](/apps/php/tugas/studi-kasus/)
-- [Tugas P11 (On Progress)](/apps/php/tugas/tugas-function/)
+- [Tugas P11](/apps/php/tugas/tugas-function/)
 
 ### Main
 
