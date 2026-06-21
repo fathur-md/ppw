@@ -26,6 +26,7 @@ $daftarMenu = [
 
 $data = null;
 
+// Memproses data ketika user submit form
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $nama = $_POST['nama'];
   $menuKey = $_POST['menu'];
