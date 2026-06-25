@@ -1,20 +1,12 @@
 <?php
 
-require_once __DIR__ . "/../Database.php";
-require_once __DIR__ . "/../Controller.php";
+require_once '../Database.php';
 
-$db = new Database();
-$conn = $db->connect();
-$controller = new Controller($conn);
+Database::createProduct(
+  $_POST['name'],
+  $_POST['price'],
+  $_POST['stock']
+);
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  $nama = trim($_POST["nama"] ?? "");
-  $nim  = trim($_POST["nim"] ?? "");
-
-  if ($nama && $nim) {
-    $controller->create($nama, $nim);
-  }
-}
-
-header("Location: ../index.php");
+header('Location: ../dashboard.php');
 exit;

@@ -1,17 +1,8 @@
 <?php
 
-require_once __DIR__ . "/../Database.php";
-require_once __DIR__ . "/../Controller.php";
+require_once '../Database.php';
 
-$db = new Database();
-$conn = $db->connect();
-$controller = new Controller($conn);
+Database::deleteProduct($_GET['id']);
 
-$id = (int) ($_GET['id'] ?? 0);
-
-if ($id > 0) {
-  $controller->delete($id);
-}
-
-header("Location: ../index.php");
+header('Location: ../dashboard.php');
 exit;
