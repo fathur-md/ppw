@@ -69,7 +69,7 @@ function card(project, mode) {
         ${project.description || "Belum ada deskripsi."}
       </p>
       <div class="flex flex-wrap gap-2 pb-4">
-        ${project.tags.map((tag) => html`<span class="bg-surface/40 border border-border-glass px-2.5 py-1 rounded-xl text-xs text-muted">${tag}</span>`).join("")}
+        ${project.tags.map((tag) => html`<span class="bg-surface border border-border-glass px-2.5 py-1 rounded-xl text-xs text-muted">${tag}</span>`).join("")}
       </div>
       <a
         href="${project.link}"

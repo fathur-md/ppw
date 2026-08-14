@@ -9,7 +9,6 @@
     },
   },
   "file_scan_exclusions": [
-    // "**/apps",
     "**/node_modules",
     "**/pnpm-workspace.yaml",
     "**/pnpm-lock.yaml",

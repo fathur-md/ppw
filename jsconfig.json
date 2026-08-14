@@ -4,5 +4,5 @@
     "module": "ES2022",
     "moduleResolution": "node"
   },
-  "include": ["assets/js/**/*"]
+  "include": ["assets/js/**/*", "apps/**/*"]
 }

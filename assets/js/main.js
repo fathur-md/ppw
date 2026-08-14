@@ -1,3 +1,4 @@
+import { renderGlobalNavbar } from "./components/navbar.js";
 import {
   getState,
   setProjects,
@@ -8,6 +9,7 @@ import {
 import { renderProjects } from "./view.js";
 
 // DOM
+document.body.insertAdjacentHTML("afterbegin", renderGlobalNavbar());
 const searchInput = document.getElementById("search-input");
 const sortSelect = document.getElementById("sort-select");
 const viewBtns = document.querySelectorAll(".switcher-btn");
