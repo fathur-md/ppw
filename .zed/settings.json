@@ -1,0 +1,18 @@
+{
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "experimental": {
+          "configFile": "assets/css/style.css",
+        },
+      },
+    },
+  },
+  "file_scan_exclusions": [
+    // "**/apps",
+    "**/node_modules",
+    "**/pnpm-workspace.yaml",
+    "**/pnpm-lock.yaml",
+    "**/.DS_Store",
+  ],
+}

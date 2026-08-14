@@ -2,40 +2,52 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="icon" href="./icon.png" type="image/png" sizes="32x32" />
 
     <title>Workspace | Pemrograman Web</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/output.css" />
   </head>
-
-  <body>
-    <header class="site-header animate-fade-top">
-      <div class="container-wide nav-container">
-        <img src="./assets/img/profile.png" alt="profile" class="nav-avatar" />
-        <nav class="nav">
-          <div class="nav-info">
-            <a href="./">
-              <strong> Fathurrahman Muhammad. </strong>
+  <body
+    class="antialiased flex flex-col min-h-dvh bg-background text-foreground font-sans"
+  >
+    <header
+      class="sticky top-0 z-50 bg-card-bg backdrop-blur-md shadow-glass-inner"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3 w-full">
+          <img
+            src="./assets/img/profile.png"
+            alt="profile"
+            class="block sm:hidden w-12 h-12 rounded-full object-top object-cover ring-2 ring-border-glass shrink-0"
+          />
+          <div class="flex flex-col sm:flex-row sm:justify-between w-full">
+            <a
+              href="./"
+              class="text-sm font-bold text-foreground/70 hover:text-accent transition-colors"
+            >
+              Fathurrahman Muhammad.
             </a>
-            <span>241110109 • Informatika 12D</span>
+            <span class="text-sm text-muted">241110109 • Informatika 12D</span>
           </div>
+        </div>
+
+        <nav class="block sm:hidden">
           <a
             href="./apps/main/"
-            class="nav-link"
+            class="text-muted hover:text-foreground transition-colors"
             aria-label="Ke halaman portfolio"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              stroke-width="2"
               stroke="currentColor"
-              class="svg-icon"
+              class="w-6 h-6"
             >
               <path
                 stroke-linecap="round"
@@ -48,30 +60,42 @@
       </div>
     </header>
 
-    <main>
+    <main class="grow flex flex-col">
       <section
-        class="hero-section animate-fade-in"
+        class="py-16 px-6 text-center"
         aria-label="Bagian hero dengan judul dan deskripsi singkat"
       >
-        <div class="container">
-          <span>Teori & Praktikum</span>
-          <h1>Pemrograman Web.</h1>
-          <p>
+        <div class="max-w-3xl mx-auto">
+          <span class="text-xl font-semibold text-muted"
+            >Teori & Praktikum</span
+          >
+          <h1
+            class="text-[clamp(2rem,6vw,3.5rem)] font-bold bg-linear-to-r from-accent via-50% via-success from-10% to-warning bg-clip-text text-transparent leading-tight mb-2"
+          >
+            Pemrograman Web.
+          </h1>
+          <p
+            class="text-base sm:text-lg text-muted max-w-2xl mx-auto leading-relaxed"
+          >
             Workspace dokumentasi perkuliahan Pemrograman Web: kumpulan latihan
             mandiri, tugas mingguan, dan proyek asesmen.
           </p>
         </div>
       </section>
 
-      <section class="projects-section">
-        <div class="container-wide">
-          <div class="project-controls">
-            <div class="search-box animate-fade-left">
+      <section class="p-6 grow">
+        <div class="max-w-6xl mx-auto">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8"
+          >
+            <div
+              class="relative flex items-center w-full md:max-w-md bg-card-bg border border-border-glass rounded-2xl px-4 py-2.5 shadow-glass-inner focus-within:ring-2 focus-within:ring-accent transition-all"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                class="svg-icon search-icon"
+                class="w-5 h-5 text-muted mr-2 shrink-0"
               >
                 <path
                   fill-rule="evenodd"
@@ -82,31 +106,53 @@
               <input
                 type="search"
                 id="search-input"
+                class="w-full bg-transparent border-none outline-none text-sm text-foreground placeholder:text-muted"
                 placeholder="Cari proyek..."
-                aria-label="Cari proyek berdasarkan judul, kategori, atau tag..."
+                aria-label="Cari proyek"
               />
             </div>
 
-            <div class="controls-right animate-fade-right">
-              <div class="select-wrapper">
+            <div class="flex items-center gap-3 w-full md:w-auto">
+              <div class="relative w-full md:w-auto">
                 <select
                   id="sort-select"
-                  class="sort-select"
-                  aria-label="Pengurutan proyek berdasarkan kriteria tertentu"
+                  class="appearance-none w-full bg-card-bg border border-border-glass rounded-2xl px-4 py-2 pr-10 text-xs font-medium text-foreground outline-none shadow-glass-inner cursor-pointer hover:bg-surface focus:ring-2 focus:ring-accent transition-all"
+                  aria-label="Pengurutan"
                 >
                   <option value="newest">Newest</option>
                   <option value="oldest">Oldest</option>
                 </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-muted"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </div>
               </div>
 
               <div
-                class="layout-switcher"
+                class="flex relative z-0 items-center bg-surface rounded-2xl p-1 shadow-glass-inner"
                 role="group"
-                aria-label="Pengalih tampilan antara grid dan list"
+                aria-label="Pengalih tampilan"
               >
+                <div
+                  id="active-pill"
+                  class="absolute top-1 bottom-1 left-0 bg-card-bg shadow-sm rounded-xl -z-10"
+                ></div>
                 <button
                   type="button"
-                  class="switcher-btn active"
+                  class="switcher-btn flex items-center gap-1.5 px-3 py-1.5 rounded-2xl text-xs font-semibold"
                   data-layout="grid"
                   aria-label="Tampilan Grid"
                 >
@@ -116,6 +162,7 @@
                     viewBox="0 0 24 24"
                     stroke-width="2"
                     stroke="currentColor"
+                    class="w-4 h-4"
                   >
                     <path
                       stroke-linecap="round"
@@ -123,20 +170,21 @@
                       d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"
                     />
                   </svg>
-                  <span>Grid</span>
+                  <span class="hidden sm:inline">Grid</span>
                 </button>
                 <button
                   type="button"
-                  class="switcher-btn"
+                  class="switcher-btn flex items-center gap-1.5 px-3 py-1.5 rounded-2xl text-xs font-semibold"
                   data-layout="list"
-                  aria-label="Tampilan Tanpa Gambar"
+                  aria-label="Tampilan List"
                 >
                   <svg
-                    xmlns="w3.org"
+                    xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke-width="2"
                     stroke="currentColor"
+                    class="w-4 h-4"
                   >
                     <path
                       stroke-linecap="round"
@@ -144,23 +192,24 @@
                       d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
                     />
                   </svg>
-                  <span>List</span>
+                  <span class="hidden sm:inline">List</span>
                 </button>
               </div>
             </div>
           </div>
 
-          <div
-            class="projects-grid view-grid"
-            id="all-projects-container"
-          ></div>
+          <div id="all-projects-container"></div>
         </div>
       </section>
     </main>
 
-    <footer class="">
-      <div class="container">
-        <small>&copy; 2026 Fathurrahman Muhammad. Informatika 12D.</small>
+    <footer
+      class="mt-auto border-t border-border-glass py-2 shadow-glass-inner bg-card-bg"
+    >
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <small class="text-muted font-normal">
+          &copy; 2026 Fathurrahman Muhammad. Informatika 12D.
+        </small>
       </div>
     </footer>
 

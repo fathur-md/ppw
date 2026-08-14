@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f5f4;
+  --foreground: #1c1917;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --border-glass: rgba(255, 255, 255, 0.25);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.03);
+  --shadow-glass-inner:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.7),
+    inset -1px -1px 0 rgba(255, 255, 255, 0.5), var(--glass-shadow);
+  --accent: #f97316;
+  --accent-secondary: #8b5cf6;
+  --muted: #78716c;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --error: #ef4444;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-accent: var(--accent);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-muted: var(--muted);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-border-glass: var(--border-glass);
+  --shadow-glass-inner: var(--shadow-glass-inner);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-round: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111111;
+    --foreground: #f5f5f4;
+    --card-bg: rgba(28, 25, 23, 0.6);
+    --accent: #fb923c;
+    --accent-secondary: #a78bfa;
+    --muted: #a8a29e;
+    --success: #4ade80;
+    --warning: #fbbf24;
+    --error: #f87171;
+    --border-glass: rgba(255, 255, 255, 0);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    --shadow-glass-inner:
+      inset 1px 1px 0 rgba(255, 255, 255, 0.15),
+      inset -1px -1px 0 rgba(255, 255, 255, 0.05);
+  }
+}
+
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  scrollbar-width: none;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+::-moz-selection {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 8px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(150, 150, 150, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent);
+}
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility min-h-screen-nav {
+  min-height: calc(100dvh - 3rem);
+}
+
+@utility min-h-screen-nav-footer {
+  min-height: calc(100dvh - (3rem + 45px));
+}
