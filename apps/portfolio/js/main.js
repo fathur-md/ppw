@@ -12,19 +12,29 @@ const appRoot = document.getElementById("app-root");
 function handleRoute(routeName) {
   setRoute(routeName);
 
-  switch (state.currentRoute) {
-    case "home":
-      appRoot.innerHTML = renderHomePage();
-      break;
-    case "projects":
-      appRoot.innerHTML = renderProjectsPage();
-      break;
-    case "about":
-      appRoot.innerHTML = renderAboutPage();
-      break;
-    default:
-      appRoot.innerHTML = renderHomePage();
-      break;
+  window.scrollTo(0, 0);
+
+  const renderView = () => {
+    switch (state.currentRoute) {
+      case "home":
+        appRoot.innerHTML = renderHomePage();
+        break;
+      case "projects":
+        appRoot.innerHTML = renderProjectsPage();
+        break;
+      case "about":
+        appRoot.innerHTML = renderAboutPage();
+        break;
+      default:
+        appRoot.innerHTML = renderHomePage();
+        break;
+    }
+  };
+
+  if (document.startViewTransition) {
+    document.startViewTransition(() => renderView());
+  } else {
+    renderView();
   }
 }
 
