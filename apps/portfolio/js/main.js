@@ -6,7 +6,7 @@ import { renderProjectsPage } from "./page/projects.js";
 import { setRoute, state } from "./state.js";
 
 document.getElementById("global-navbar").innerHTML =
-  renderGlobalNavbar("../../../");
+  renderGlobalNavbar("../../");
 document.getElementById("global-navbar").classList.add("mb-2");
 const appRoot = document.getElementById("app-root");
 
