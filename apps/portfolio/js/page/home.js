@@ -3,7 +3,7 @@ import { html } from "../utils.js";
 export function renderHomePage() {
   return html`
     <section
-      class="flex flex-col justify-center items-center text-center animate-fade-in py-12 relative isolate"
+      class="flex flex-col justify-center items-center text-center py-12 relative isolate"
     >
       <p class="text-muted text-xl font-mono font-semibold tracking-wide">
         &gt; Hello, World.

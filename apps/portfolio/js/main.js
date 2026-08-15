@@ -1,5 +1,6 @@
 import { renderGlobalNavbar } from "../../../assets/js/components/navbar.js";
 import { renderAboutPage } from "./page/about.js";
+import { renderContactPage } from "./page/contact.js";
 import { renderHomePage } from "./page/home.js";
 import { renderProjectsPage } from "./page/projects.js";
 import { setRoute, state } from "./state.js";
@@ -23,8 +24,11 @@ function handleRoute(routeName) {
       case "about":
         appRoot.innerHTML = renderAboutPage();
         break;
+      case "contact":
+        appRoot.innerHTML = renderContactPage();
+        break;
       default:
-        appRoot.innerHTML = renderHomePage();
+        appRoot.innerHTML = renderContactPage();
         break;
     }
     window.scrollTo(0, 0);

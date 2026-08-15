@@ -8,6 +8,7 @@
       },
     },
   },
+  "linked_edits": true,
   "file_scan_exclusions": [
     "**/node_modules",
     "**/pnpm-workspace.yaml",

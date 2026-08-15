@@ -2,7 +2,7 @@ import { html } from "../utils.js";
 
 export function renderAboutPage() {
   return html`
-    <div class="animate-fade-in flex flex-col py-8 w-full">
+    <div class="flex flex-col py-8 w-full">
       <header class="flex flex-col md:flex-row md:gap-6 md:items-center">
         <div class="relative w-16 h-16 sm:w-20 sm:h-20 mb-6 my-auto">
           <img
