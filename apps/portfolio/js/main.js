@@ -12,8 +12,6 @@ const appRoot = document.getElementById("app-root");
 function handleRoute(routeName) {
   setRoute(routeName);
 
-  window.scrollTo(0, 0);
-
   const renderView = () => {
     switch (state.currentRoute) {
       case "home":
@@ -29,6 +27,7 @@ function handleRoute(routeName) {
         appRoot.innerHTML = renderHomePage();
         break;
     }
+    window.scrollTo(0, 0);
   };
 
   if (document.startViewTransition) {
