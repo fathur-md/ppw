@@ -30,11 +30,12 @@ export function renderProjects() {
       root.className = "flex flex-col gap-5";
     }
     const renderedCards = Array.from(root.children);
-    renderedCards.forEach((card, index) => {
-      card.style.transitionDelay = `${index * 100}ms`;
-      card.getBoundingClientRect();
-      card.classList.add("transition-all", "duration-500", "ease-out");
-      card.classList.remove("opacity-0", "translate-y-8");
+    requestAnimationFrame(() => {
+      renderedCards.forEach((card, index) => {
+        card.style.transitionDelay = `${index * 75}ms`;
+        card.classList.add("transition-all", "duration-500", "ease-out");
+        card.classList.remove("opacity-0", "translate-y-8");
+      });
     });
   }
 }

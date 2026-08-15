@@ -91,7 +91,9 @@ function debounce(func, delay = 350) {
 
 async function loadProjects() {
   try {
-    const res = await fetch("./assets/js/data/projects.json");
+    const res = await fetch("./assets/js/data/projects.json", {
+      cache: "no-store",
+    });
     if (!res.ok) throw new Error("Failed to load projects");
 
     const data = await res.json();

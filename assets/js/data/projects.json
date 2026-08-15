@@ -109,5 +109,41 @@
     "img": "https://i.pinimg.com/736x/7a/fb/04/7afb0491c91b2f9e9aac56667c3be677.jpg",
     "link": "./apps/latihanjs",
     "tags": ["Lab Work", "HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": 9,
+    "category": "Asesmen",
+    "type": "ASN Teori Kelompok",
+    "title": "DonasiKita",
+    "description": "Platform penggalangan dana (crowdfunding) untuk kampanye sosial. Menggunakan arsitektur MVC modern dengan integrasi Alpine.js untuk reaktivitas antarmuka tanpa virtual DOM yang berat.",
+    "status": "Completed",
+    "createdAt": "2026-06-24",
+    "img": "https://raw.githubusercontent.com/fathur-md/asn-laravel/main/public/logo.png",
+    "link": "https://github.com/fathur-md/asn-laravel",
+    "tags": ["Theory", "Laravel 13", "Tailwind CSS 4", "Alpine.js"]
+  },
+  {
+    "id": 10,
+    "category": "Asesmen",
+    "type": "UAS Teori",
+    "title": "SiapSedia (SaaS)",
+    "description": "Hyperlocal Marketplace berbasis Software as a Service. Menjembatani pelanggan dengan penyedia jasa lokal (Galon, LPG, Laundry) menggunakan bleeding-edge tech stack dan Server Actions.",
+    "status": "Completed",
+    "createdAt": "2026-07-10",
+    "img": "https://raw.githubusercontent.com/fathur-md/uas-saas/main/public/images/about_hero.jpg",
+    "link": "https://uas-saas.vercel.app/",
+    "tags": ["Theory", "Next.js 16", "React 19", "Prisma", "Neon Postgres"]
+  },
+  {
+    "id": 11,
+    "category": "Asesmen",
+    "type": "UAS Praktikum",
+    "title": "Sistem Informasi KTM",
+    "description": "Aplikasi manajemen data Kartu Tanda Mahasiswa (KTM). Mengimplementasikan fungsionalitas CRUD secara komprehensif menggunakan ekosistem Native PHP dan database relasional.",
+    "status": "Completed",
+    "createdAt": "2026-07-20",
+    "img": "https://raw.githubusercontent.com/fathur-md/uas-ppw/main/assets/images/logo_umby_blue_nobg.png",
+    "link": "https://github.com/fathur-md/uas-ppw",
+    "tags": ["Lab Work", "Native PHP", "MySQL", "CRUD"]
   }
 ]
